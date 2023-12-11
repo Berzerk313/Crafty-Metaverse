@@ -49,14 +49,23 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1670px;
+    max-width: 1660px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 ////////////////////////////////
 ////////////////////////////////
 ////////////////////////////////
+
+.header_background{
+    background: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    width: 100%;
+    z-index: 12;
+    transition: all 0.5s;
+    padding-bottom: 30px;
+}
 
 .header {
     position: fixed;
@@ -126,7 +135,7 @@ body {
         height: 100%;
         width: 100%;
         z-index: 9;
-        background-color: rgba(0, 0, 0, 0.35);
+        background-color: rgba(0, 0, 0, 0.75);
     }
 
     .burger-backdrop.active {
@@ -201,13 +210,20 @@ body {
             right: -100%;
             width: 39%;
             height: 100%;
-            background-color: #1B1B1B;
+            background-image: url(../img/header/burger-background.png);
+            background-size: cover;
             padding: 100px 100px 100px 50px;
             transition: right 0.3s ease 0s;
             overflow: auto;
             display: flex;
             flex-direction: column;
             z-index: 12;
+            &__link{
+                width: 100%;
+            }
+            &__text{
+                width: 100%;
+            }
         }
 
         .active {
@@ -221,6 +237,22 @@ body {
 
 }
 
+@media (max-width: 768px) {
+    .header{
+        &-menu{
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .header{
+        &-menu{
+            width: 100%;
+        }
+    }
+}
+
 ////////////////////////////////
 ////////////////////////////////
 ////////////////////////////////
@@ -230,11 +262,12 @@ body {
         background-image: url(../img/shared/background.png);
         background-size: cover;
         width: 100%;
-        height: 1050px;
+        height: 1010px;
     }
 
     &-content {
         padding-top: 325px;
+        margin-bottom: 0px;
         // display: flex;
         // justify-content: left;
         // align-items: center;
@@ -242,42 +275,49 @@ body {
     }
 
     &__border {
-        margin-top: 183px;
-        border-left: solid;
-        width: 480px;
-        height: 6px;
-        transform: rotate(90deg) translateY(230px);
-        border-radius: 41px;
-        background: #7F5CFF;
-        box-shadow: 0px 0px 17px 0px rgba(191, 58, 255, 0.40);
-        background-image: url(../img/shared/brush.svg);
+        // border-left: 1px solid;
+        // margin-top: 183px;
+        // // border-left: 6px solid;
+        // // max-width: 480px;
+        // // min-width: 341;
+        // // height: 6px;
+        // // transform: rotate(90deg) translateY(230px);
+        // border-radius: 41px;
+        // background: #7F5CFF;
+        // box-shadow: 0px 0px 17px 0px rgba(191, 58, 255, 0.40);
+        // background-image: url(../img/shared/brush.svg);
     }
 
     &-info {
+        margin-top: 150px;
+        border-left: 6px solid #7F5CFF;
+        background-image: url(../img/shared/brush.svg);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: left;
-        padding-left: 100px;
+        padding-left: 61px;
         transform: translateY(-200px);
+        max-width: 1348px;
         
 
         &__title {
             color: #FFF;
             font-family: 'Plus Jakarta Display';
-            font-size: 20px;
+            font-size: clamp(16px, 2.5vw, 20px);
             font-style: normal;
             font-weight: 400;
             line-height: 140%;
             /* 28px */
             text-transform: uppercase;
             opacity: 0.7;
+            padding-top: 15px;
         }
 
         &__subtitle {
             color: #FFF;
             font-family: 'HeliosExtC';
-            font-size: 48px;
+            font-size: clamp(26px, 2.5vw, 48px);
             font-style: normal;
             font-weight: 700;
             line-height: 140%;
@@ -296,6 +336,7 @@ body {
 
         &__button {
             margin-top: 65px;
+            margin-bottom: 25px;
             width: 209px;
             height: 60px;
             padding: 16px 24px;
@@ -303,12 +344,13 @@ body {
             border: 0px solid rgba(255, 255, 255, 0.56);
             background: linear-gradient(99deg, #7A42F4 0%, #4642F4 100%), #FFF;
             transition: all 0.5s ease;
+
             
 
             &-text {
                 color: #FFF;
                 font-family: 'HeliosBlackC';
-                font-size: 18px;
+                font-size: clamp(16.219px, 2.5vw, 18px);
                 font-style: normal;
                 font-weight: 900;
                 line-height: 145%;
@@ -333,7 +375,8 @@ body {
             background-image: url(../img/shared/mobile/background-mobile.png);
             background-size: cover;
             width: 100%;
-            height: 1050px;
+            min-height: 787px;
+            // height: 1050px;
         }
     }
 }
