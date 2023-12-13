@@ -210,9 +210,6 @@ body {
     z-index: 13;
     transition: all 0.3s ease-in-out;
   }
-  .header .header-burger_shift {
-    margin-right: 17px;
-  }
   .header .header-burger.active .header-burger__span-middle {
     opacity: 0;
   }
@@ -413,6 +410,7 @@ body {
   align-items: left;
   padding-left: 61px;
   max-width: 669px;
+  position: relative;
 }
 .about-info__title {
   padding-top: 55px;
@@ -440,7 +438,7 @@ body {
   padding-bottom: 27px;
 }
 .about-swiper {
-  max-width: 650px;
+  max-width: 622px;
 }
 .about-slide p {
   color: #FFF;
@@ -477,19 +475,19 @@ body {
   text-transform: uppercase;
 }
 .about__pagination {
-  margin-top: 1780px;
-  margin-left: 230px;
   max-width: 380px;
   --swiper-theme-color: #7F5CFF;
   --swiper-navigation-size: 10px;
 }
-.about__pagination-block {
-  position: relative;
-}
 .about__pagination-ellipse {
   position: absolute;
-  top: -65px;
-  left: -12px;
+  left: 7%;
+  bottom: 8.5%;
   width: 30px;
   height: 30px;
+}
+.about .swiper-pagination-progressbar.swiper-pagination-horizontal {
+  top: unset;
+  bottom: 11%;
+  left: 11%;
 }/*# sourceMappingURL=style.css.map */
