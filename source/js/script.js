@@ -56,6 +56,26 @@ function scrollFunction() {
 
 ///////////////////////////
 
-
+var swiper = new Swiper(".about-swiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
+  navigation: {
+    nextEl: ".about__navigation-next",
+    prevEl: ".about__navigation-prev",
+  },
+  // loop: true,
+  spaceBetween: 30,
+  updateOnWindowResize: true,
+  breakpoints: {
+    1920: {
+      slidesPerView: 1,
+    },
+    320: {
+      slidesPerView: 1,
+    },
+  },
+});
 
 

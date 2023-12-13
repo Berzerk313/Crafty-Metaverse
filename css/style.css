@@ -405,7 +405,7 @@ body {
 }
 .about-info {
   height: 585px;
-  border-left: 6px solid #7F5CFF;
+  border-left: 6px solid #56FFEB;
   background-image: url(../img/shared/brush.svg);
   display: flex;
   flex-direction: column;
@@ -415,6 +415,7 @@ body {
   max-width: 669px;
 }
 .about-info__title {
+  padding-top: 55px;
   color: #FFF;
   font-family: "Plus Jakarta Display";
   font-size: clamp(16px, 2.5vw, 20px);
@@ -438,7 +439,10 @@ body {
   padding-top: 16px;
   padding-bottom: 27px;
 }
-.about-info .swiper-slide p {
+.about-swiper {
+  max-width: 650px;
+}
+.about-slide p {
   color: #FFF;
   font-family: "Plus Jakarta Display";
   font-size: clamp(16px, 2.5vw, 20px);
@@ -447,4 +451,45 @@ body {
   line-height: 160%;
   /* 32px */
   opacity: 0.8;
+  max-width: 612px;
+}
+.about__navigation {
+  padding-top: 100px;
+  max-width: 380px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about__navigation-prev {
+  cursor: pointer;
+}
+.about__navigation-next {
+  cursor: pointer;
+}
+.about__navigation-text {
+  color: #FFF;
+  font-family: "HeliosExtC";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 145%;
+  /* 26.1px */
+  text-transform: uppercase;
+}
+.about__pagination {
+  margin-top: 1780px;
+  margin-left: 230px;
+  max-width: 380px;
+  --swiper-theme-color: #7F5CFF;
+  --swiper-navigation-size: 10px;
+}
+.about__pagination-block {
+  position: relative;
+}
+.about__pagination-ellipse {
+  position: absolute;
+  top: -65px;
+  left: -12px;
+  width: 30px;
+  height: 30px;
 }/*# sourceMappingURL=style.css.map */
