@@ -430,6 +430,9 @@ body {
             min-height: 787px;
             // height: 1050px;
         }
+        &-info{
+            padding-left: 19px;
+        }
     }
 }
 
@@ -492,13 +495,18 @@ body {
     }
 
     &-swiper {
-        max-width: 622px;
+        // max-width: 622px;
+        width: 100%;
+        // overflow: visible ; 
+        // !important
     }
 
-    &-wrapper {}
+    &-wrapper {
+        width: 100%;
+    }
 
     &-slide {
-        
+        width: 100%;
         p {
             color: #FFF;
             font-family: 'Plus Jakarta Display';
@@ -544,7 +552,8 @@ body {
     //     left: 0;
     // }
     &__pagination {
-        max-width: 380px;
+        // max-width: 380px;
+        
         --swiper-theme-color: #7F5CFF;
         --swiper-navigation-size: 10px;
         // transform: translate();
@@ -552,7 +561,7 @@ body {
     &__pagination-ellipse{
         position: absolute;
         // top: -65px;
-        left: 7%;
+        left: 8.8%;
         bottom: 8.5%;
         width: 30px;
         height: 30px;
@@ -560,20 +569,77 @@ body {
     .swiper-pagination-progressbar.swiper-pagination-horizontal{
         top: unset;
         bottom: 11%;
-        left: 11%;
+        left: 12%;
+        width: 58%;
+       
     }
 }
 
-// @media (max-width: 720px) {
-//     .about{
-//         &-swiper{
-//             // width: 321px;
-//         }
-//         &-slide{
-            
-//             p{
-//                 width: 321px;
-//             }
-//         }
-//     }
-// }
+@media (max-width: 800px) {
+    .about{
+        .swiper-pagination-progressbar.swiper-pagination-horizontal{
+            top: unset;
+            bottom: 18%;
+            left: 13%;
+            width: 58%;
+           
+        }
+        &__pagination-ellipse{
+            bottom: 15.5%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .about{
+        &-info{
+            padding-left: 19px;
+        }
+        .swiper-pagination-progressbar.swiper-pagination-horizontal{
+            left: 8%;       
+        }
+        &__pagination-ellipse{
+            left: 4.8%;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .about{
+        .swiper-pagination-progressbar.swiper-pagination-horizontal{
+            top: unset;
+            bottom: 18%;
+            left: 8.5%;
+            width: 65%;
+           
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .about{
+        .swiper-pagination-progressbar.swiper-pagination-horizontal{
+            top: unset;
+            bottom: 18%;
+            left: 8.5%;
+            width: 80%;
+           
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .about{
+        .swiper-pagination-progressbar.swiper-pagination-horizontal{
+            top: unset;
+            bottom: 14%;
+            left: 8.5%;
+            width: 88%;
+           
+        }
+        &__pagination-ellipse{
+            bottom: 12%;
+            left: 4%;
+        }
+    }
+}
