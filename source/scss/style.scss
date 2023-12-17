@@ -381,11 +381,14 @@ body {
             padding-top: 16px;
             max-width: 753px;
 
-            span {
+            &-span-desctop {
                 display: inline-block;
                 background-image: url(../img/shared/plain.svg);
                 height: 46px;
                 width: 46px;
+            }
+            &-span-mobile{
+                display: none;
             }
         }
 
@@ -427,14 +430,38 @@ body {
             background-image: url(../img/shared/mobile/background-mobile.png);
             background-size: cover;
             width: 100%;
-            min-height: 787px;
+            max-height: 787px;
             // height: 1050px;
         }
-        &-info{
+
+        &-content {
+            padding-top: 265px;
+        }
+
+        &-info {
             padding-left: 19px;
+
+            &__button {
+                margin-top: 12px;
+                width: 188.32px;
+                height: 54.063px;
+            }
+
+            &__subtitle {
+                &-span-desctop {
+                    display: none;   
+                }
+                &-span-mobile{
+                    display: inline-block;
+                    background-image: url(../img/shared/mobile/plain.svg);
+                    width: 28.162px;
+                    height: 28.162px;
+                }
+            }
         }
     }
 }
+
 
 ////////////////////////////////
 ////////////////////////////////
@@ -450,6 +477,12 @@ body {
 
     &-content {
         padding-top: 250px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__people{
+        display: none;
     }
 
     &-info {
@@ -507,6 +540,7 @@ body {
 
     &-slide {
         width: 100%;
+
         p {
             color: #FFF;
             font-family: 'Plus Jakarta Display';
@@ -538,7 +572,7 @@ body {
         &-text {
             color: #FFF;
             font-family: 'HeliosExtC';
-            font-size: 18px;
+            font-size: clamp(16px, 2.5vw, 18px);
             font-style: normal;
             font-weight: 700;
             line-height: 145%;
@@ -546,6 +580,7 @@ body {
             text-transform: uppercase;
         }
     }
+
     // .swiper-pagination-progressbar{
     //     position: absolute;
     //     top: 70%;
@@ -553,12 +588,13 @@ body {
     // }
     &__pagination {
         // max-width: 380px;
-        
+
         --swiper-theme-color: #7F5CFF;
         --swiper-navigation-size: 10px;
         // transform: translate();
     }
-    &__pagination-ellipse{
+
+    &__pagination-ellipse {
         position: absolute;
         // top: -65px;
         left: 8.8%;
@@ -566,81 +602,145 @@ body {
         width: 30px;
         height: 30px;
     }
-    .swiper-pagination-progressbar.swiper-pagination-horizontal{
+
+    .swiper-pagination-progressbar.swiper-pagination-horizontal {
         top: unset;
         bottom: 11%;
         left: 12%;
         width: 58%;
         z-index: 1;
-       
+
     }
 }
 
 @media (max-width: 800px) {
-    .about{
-        .swiper-pagination-progressbar.swiper-pagination-horizontal{
+    .about {
+        .swiper-pagination-progressbar.swiper-pagination-horizontal {
             top: unset;
             bottom: 18%;
             left: 13%;
             width: 58%;
-           
+
         }
-        &__pagination-ellipse{
+
+        &__pagination-ellipse {
             bottom: 15.5%;
         }
     }
 }
 
 @media (max-width: 700px) {
-    .about{
-        &-info{
+    .about {
+        &-info {
             padding-left: 19px;
         }
-        .swiper-pagination-progressbar.swiper-pagination-horizontal{
-            left: 8%;       
+
+        .swiper-pagination-progressbar.swiper-pagination-horizontal {
+            left: 8%;
         }
-        &__pagination-ellipse{
+
+        &__pagination-ellipse {
             left: 4.8%;
         }
     }
 }
 
 @media (max-width: 650px) {
-    .about{
-        .swiper-pagination-progressbar.swiper-pagination-horizontal{
+    .about {
+        .swiper-pagination-progressbar.swiper-pagination-horizontal {
             top: unset;
             bottom: 18%;
             left: 8.5%;
             width: 65%;
-           
+
         }
     }
 }
 
 @media (max-width: 600px) {
-    .about{
-        .swiper-pagination-progressbar.swiper-pagination-horizontal{
+    .about {
+        .swiper-pagination-progressbar.swiper-pagination-horizontal {
             top: unset;
             bottom: 18%;
-            left: 8.5%;
+            left: 9%;
             width: 80%;
-           
+
         }
     }
 }
 
 @media (max-width: 500px) {
-    .about{
-        .swiper-pagination-progressbar.swiper-pagination-horizontal{
+    .about {
+        .swiper-pagination-progressbar.swiper-pagination-horizontal {
             top: unset;
             bottom: 14%;
-            left: 8.5%;
+            left: 9.5%;
             width: 88%;
-           
+
         }
-        &__pagination-ellipse{
+
+        &__pagination-ellipse {
             bottom: 12%;
             left: 4%;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .about {
+        &-content{
+            padding-top: 0;
+            position: relative;
+        }
+        &__people{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            
+            img{
+                
+               width: 100%;
+               
+            }
+        }
+        &-info{
+            margin-top: 444px;
+            &__title{
+                padding-top: 0;
+            }
+        }
+        .swiper-pagination-progressbar.swiper-pagination-horizontal {
+            top: unset;
+            bottom: 13.5%;
+            left: 13.5%;
+            width: 84%;
+
+        }
+
+        &__pagination-ellipse {
+            bottom: 11.5%;
+            left: 8%;
+            width: 25.872px;
+            height: 25.872px;
+        }
+
+        &__navigation {
+            padding-top: 62px;
+        }
+
+    }
+}
+
+@media (max-width: 350px) {
+    .about{
+        .swiper-pagination-progressbar.swiper-pagination-horizontal {
+            left: 14.5%;
+        }   
+
+        &__navigation {
+            padding-top: 82px;
         }
     }
 }

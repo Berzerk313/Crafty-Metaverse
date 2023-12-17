@@ -352,11 +352,14 @@ body {
   padding-top: 16px;
   max-width: 753px;
 }
-.shared-info__subtitle span {
+.shared-info__subtitle-span-desctop {
   display: inline-block;
   background-image: url(../img/shared/plain.svg);
   height: 46px;
   width: 46px;
+}
+.shared-info__subtitle-span-mobile {
+  display: none;
 }
 .shared-info__button {
   margin-top: 65px;
@@ -388,10 +391,27 @@ body {
     background-image: url(../img/shared/mobile/background-mobile.png);
     background-size: cover;
     width: 100%;
-    min-height: 787px;
+    max-height: 787px;
+  }
+  .shared-content {
+    padding-top: 265px;
   }
   .shared-info {
     padding-left: 19px;
+  }
+  .shared-info__button {
+    margin-top: 12px;
+    width: 188.32px;
+    height: 54.063px;
+  }
+  .shared-info__subtitle-span-desctop {
+    display: none;
+  }
+  .shared-info__subtitle-span-mobile {
+    display: inline-block;
+    background-image: url(../img/shared/mobile/plain.svg);
+    width: 28.162px;
+    height: 28.162px;
   }
 }
 .about__background {
@@ -402,6 +422,11 @@ body {
 }
 .about-content {
   padding-top: 250px;
+  display: flex;
+  flex-direction: column;
+}
+.about__people {
+  display: none;
 }
 .about-info {
   height: 585px;
@@ -476,7 +501,7 @@ body {
 .about__navigation-text {
   color: #FFF;
   font-family: "HeliosExtC";
-  font-size: 18px;
+  font-size: clamp(16px, 2.5vw, 18px);
   font-style: normal;
   font-weight: 700;
   line-height: 145%;
@@ -536,7 +561,7 @@ body {
   .about .swiper-pagination-progressbar.swiper-pagination-horizontal {
     top: unset;
     bottom: 18%;
-    left: 8.5%;
+    left: 9%;
     width: 80%;
   }
 }
@@ -544,11 +569,56 @@ body {
   .about .swiper-pagination-progressbar.swiper-pagination-horizontal {
     top: unset;
     bottom: 14%;
-    left: 8.5%;
+    left: 9.5%;
     width: 88%;
   }
   .about__pagination-ellipse {
     bottom: 12%;
     left: 4%;
+  }
+}
+@media (max-width: 390px) {
+  .about-content {
+    padding-top: 0;
+    position: relative;
+  }
+  .about__people {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .about__people img {
+    width: 100%;
+  }
+  .about-info {
+    margin-top: 444px;
+  }
+  .about-info__title {
+    padding-top: 0;
+  }
+  .about .swiper-pagination-progressbar.swiper-pagination-horizontal {
+    top: unset;
+    bottom: 13.5%;
+    left: 13.5%;
+    width: 84%;
+  }
+  .about__pagination-ellipse {
+    bottom: 11.5%;
+    left: 8%;
+    width: 25.872px;
+    height: 25.872px;
+  }
+  .about__navigation {
+    padding-top: 62px;
+  }
+}
+@media (max-width: 350px) {
+  .about .swiper-pagination-progressbar.swiper-pagination-horizontal {
+    left: 14.5%;
+  }
+  .about__navigation {
+    padding-top: 82px;
   }
 }/*# sourceMappingURL=style.css.map */
