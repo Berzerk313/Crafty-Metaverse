@@ -100,11 +100,13 @@ body {
         &__text {
             position: relative;
             color: #FFF;
+            opacity: 0.7;
             font-family: 'Plus Jakarta Display';
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
             line-height: 140%;
+            transition: all 0.25s ease;
 
             &::before {
                 position: absolute;
@@ -123,6 +125,11 @@ body {
                 transform: scaleX(1);
                 transition: transform 0.25s;
             }
+        }
+
+        &__text:hover {
+            opacity: 1;
+            transition: all 0.25s ease;
         }
     }
 
@@ -387,7 +394,8 @@ body {
                 height: 46px;
                 width: 46px;
             }
-            &-span-mobile{
+
+            &-span-mobile {
                 display: none;
             }
         }
@@ -449,9 +457,10 @@ body {
 
             &__subtitle {
                 &-span-desctop {
-                    display: none;   
+                    display: none;
                 }
-                &-span-mobile{
+
+                &-span-mobile {
                     display: inline-block;
                     background-image: url(../img/shared/mobile/plain.svg);
                     width: 28.162px;
@@ -481,7 +490,7 @@ body {
         flex-direction: column;
     }
 
-    &__people{
+    &__people {
         display: none;
     }
 
@@ -688,29 +697,33 @@ body {
 
 @media (max-width: 390px) {
     .about {
-        &-content{
+        &-content {
             padding-top: 0;
             position: relative;
         }
-        &__people{
+
+        &__people {
             display: block;
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            
-            img{
-                
-               width: 100%;
-               
+
+            img {
+
+                width: 100%;
+
             }
         }
-        &-info{
+
+        &-info {
             margin-top: 444px;
-            &__title{
+
+            &__title {
                 padding-top: 0;
             }
         }
+
         .swiper-pagination-progressbar.swiper-pagination-horizontal {
             top: unset;
             bottom: 13.5%;
@@ -734,13 +747,222 @@ body {
 }
 
 @media (max-width: 350px) {
-    .about{
+    .about {
         .swiper-pagination-progressbar.swiper-pagination-horizontal {
             left: 14.5%;
-        }   
+        }
 
         &__navigation {
             padding-top: 82px;
+        }
+    }
+}
+
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+
+.roadmap {
+    &-background {
+        background: #090812;
+    }
+
+    &__title {
+        padding-top: 220px;
+        color: #FFF;
+        text-align: center;
+        font-family: 'Plus Jakarta Display';
+        font-size: clamp(16px, 2.5vw, 20px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        /* 28px */
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        padding-top: 16px;
+        color: #FFF;
+        text-align: center;
+        font-family: 'HeliosExtC';
+        font-size: clamp(28px, 2.5vw, 45px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 109%;
+        /* 49.05px */
+        text-transform: uppercase;
+    }
+
+    &-content {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    &-item-first {
+        display: flex;
+    }
+
+    &-item-second {
+        display: flex;
+
+        .roadmap-item-circle {
+            order: 1;
+        }
+
+        .roadmap-item-info {
+            order: 2;
+        }
+    }
+
+    &-item-third {
+        display: flex;
+    }
+
+    &-item-fourth {
+        display: flex;
+
+        .roadmap-item-circle {
+            order: 1;
+        }
+
+        .roadmap-item-info {
+            order: 2;
+        }
+    }
+
+    &-item-info {
+        display: flex;
+        flex-direction: column;
+
+        &__title {
+            color: #FFF;
+            font-family: 'Plus Jakarta Display';
+            font-size: clamp(20px, 2.5vw, 22px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%;
+            /* 30.8px */
+        }
+
+        &-textblock {
+            padding-top: 5px;
+
+            &__text {
+                padding-top: 15px;
+                padding-left: 37px;
+                color: #FFF;
+                font-family: 'Plus Jakarta Display';
+                font-size: clamp(15px, 2.5vw, 18px);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                /* 25.2px */
+                letter-spacing: 0.18px;
+                opacity: 0.8;
+                position: relative;
+            }
+
+            &__text::before {
+                content: "";
+                background-image: url(../img/roadmap/for-text.svg);
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 15px;
+                left: 0px;
+            }
+            &__text:last-child{
+                margin-bottom: 23px;
+            }
+        }
+
+       
+
+        &-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            cursor: pointer;
+            &__text {
+                color: #FFF;
+                font-family: 'HeliosExtC';
+                font-size: clamp(16px, 2.5vw, 18px);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 145%;
+                /* 26.1px */
+                text-transform: capitalize;
+
+            }
+
+            &__arrow {
+                padding-top: 5px;
+
+                &-img {
+                    transition: transform 0.5s ease;
+                }
+            }
+        }
+
+        &__content {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.5s ease-in-out;
+
+            &-text {
+                padding-top: 15px;
+                padding-left: 37px;
+                color: #FFF;
+                font-family: 'Plus Jakarta Display';
+                font-size: clamp(15px, 2.5vw, 18px);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                /* 25.2px */
+                letter-spacing: 0.18px;
+                opacity: 0.8;
+                position: relative;
+            }
+
+            &-text::before {
+                content: "";
+                background-image: url(../img/roadmap/for-text.svg);
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 15px;
+                left: 0px;
+
+            }
+        }
+    }
+
+    .roadmap-item-info.active .roadmap-item-info__content {
+        max-height: 300px;
+        animation: fade 0.5s ease-in-out;
+    }
+
+    .roadmap-item-info.active .roadmap-item-info-nav__arrow-img {
+        transform: rotate(180deg);
+        transition: transform 0.5s ease;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    &-item-circle {
+        &__img {
+            
         }
     }
 }

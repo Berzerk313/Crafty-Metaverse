@@ -78,6 +78,14 @@ var swiper = new Swiper(".about-swiper", {
   },
 });
 
+//////////////////////////////
 
+const accordionItems = document.querySelectorAll('.roadmap-item-info');
+
+accordionItems.forEach(accordionItem => {
+  accordionItem.addEventListener("click", () => {
+    accordionItem.classList.toggle("active");
+  });
+});
 
 
