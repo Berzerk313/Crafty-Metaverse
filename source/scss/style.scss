@@ -701,8 +701,10 @@ body {
         &__background {
             background-image: none;
             background-color: #01001F;
-            height: 1078px;;
+            height: 1078px;
+            ;
         }
+
         &-content {
             padding-top: 0;
             position: relative;
@@ -726,6 +728,7 @@ body {
 
         &-info {
             margin-top: 444px;
+
             &__title {
                 padding-top: 0;
             }
@@ -807,13 +810,13 @@ body {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        padding-bottom: 210px;
+        padding-bottom: 190px;
         position: relative;
         // grid-template-columns: repeat(1fr);
 
     }
 
-    &__stars{
+    &__stars {
         position: absolute;
         top: 6%;
         left: 47%;
@@ -835,7 +838,7 @@ body {
             order: 1;
         }
 
-        .roadmap-item-wrapper{
+        .roadmap-item-wrapper {
             order: 2;
         }
     }
@@ -911,7 +914,7 @@ body {
                 margin-bottom: 23px;
             }
 
-            li{
+            li {
                 // padding-top: 15px;
                 padding-left: 60px;
                 color: #FFF;
@@ -925,7 +928,8 @@ body {
                 opacity: 0.8;
                 position: relative;
             }
-            li:before{
+
+            li:before {
                 content: '.';
                 position: absolute;
                 bottom: 15%;
@@ -1080,15 +1084,15 @@ body {
         }
 
         .pulse-center_first {
-            background: rgb(255,222,255);
+            background: rgb(255, 222, 255);
         }
 
         .pulse-center_second {
-            background: rgb(255,236,255);
+            background: rgb(255, 236, 255);
         }
 
         .pulse-center_third {
-            background: rgb(235,255,255);
+            background: rgb(235, 255, 255);
         }
 
         .pulse-center_fourth {
@@ -1108,15 +1112,15 @@ body {
         }
 
         .pulse-around-center_first {
-            background: rgb(223,90,255);
+            background: rgb(223, 90, 255);
         }
 
         .pulse-around-center_second {
-            background: rgb(253,155,235);
+            background: rgb(253, 155, 235);
         }
 
         .pulse-around-center_third {
-            background: rgb(141,255,255);
+            background: rgb(141, 255, 255);
         }
 
         .pulse-around-center_fourth {
@@ -1129,7 +1133,7 @@ body {
 @media (max-width: 1240px) {
     .roadmap {
         &-item-info {
-            &__content{
+            &__content {
                 position: static;
             }
         }
@@ -1146,15 +1150,17 @@ body {
 
 @media (max-width: 768px) {
     .roadmap {
-        &-content{
+        &-content {
             padding-bottom: 160px;
         }
+
         &-item-circle__pulse {
             position: relative;
             width: 50px;
             height: 50px;
             border-radius: 50%;
         }
+
         &-item-circle__pulse-center {
             position: absolute;
             top: 50%;
@@ -1166,44 +1172,51 @@ body {
             z-index: 3;
             opacity: 0.5;
         }
+
         &-item-circle__pulse-around-center {
             width: 30px;
             height: 30px;
 
         }
-        &-item-info-textblock{
+
+        &-item-info-textblock {
             padding-top: 10px;
-            &__text{
+
+            &__text {
                 padding-top: 17.96px;
             }
-            li:before{
+
+            li:before {
                 content: '.';
                 position: absolute;
                 bottom: 16%;
                 left: 12%;
             }
         }
-       
-        &-item-first{
+
+        &-item-first {
             flex-direction: column;
             padding: 18px 0 0 0;
+
             .roadmap-item-circle {
                 display: flex;
                 justify-content: end;
                 order: 1;
+
                 .pulse_first {
                     background: rgb(131, 48, 254);
                     margin: 50px 63px 0 0px;
                 }
             }
-    
+
             .roadmap-item-info {
                 padding-top: 0;
                 order: 2;
-                &__title{
+
+                &__title {
                     padding-top: 8px;
                 }
-                
+
             }
         }
 
@@ -1211,71 +1224,226 @@ body {
             display: flex;
             justify-content: end;
         }
-        &-item-second{
+
+        &-item-second {
             flex-direction: column-reverse;
             padding: 70px 0px 0 0;
             width: 100%;
+
             .roadmap-item-circle {
                 .pulse_second {
                     background: rgb(255, 134, 255);
                     margin: 0px 0px 0px 60px;
                 }
             }
-            .roadmap-item-wrapper{
+
+            .roadmap-item-wrapper {
                 order: 1;
             }
-            .roadmap-item-info{
+
+            .roadmap-item-info {
                 justify-content: end;
                 padding-top: 40px;
-                
+
             }
         }
-        &-item-third{
+
+        &-item-third {
             flex-direction: column;
             padding: 27px 0 0 0px;
+
             .roadmap-item-circle {
                 display: flex;
                 justify-content: end;
                 order: 1;
+
                 .pulse_third {
                     background: rgb(65, 251, 191);
                     margin: 0px 60px 0 0px;
                 }
             }
-    
+
             .roadmap-item-info {
                 order: 2;
                 padding-top: 40px;
             }
         }
-        &-item-fourth{
+
+        &-item-fourth {
             flex-direction: column-reverse;
             padding: 50px 0px 0px 0;
+
             .roadmap-item-circle {
                 .pulse_fourth {
                     background: rgb(72, 132, 255);
                     margin: 22px 0px 0 45px;
                 }
             }
-            .roadmap-item-wrapper{
+
+            .roadmap-item-wrapper {
                 order: 1;
-            }   
-            .roadmap-item-info{
+            }
+
+            .roadmap-item-info {
                 justify-content: end;
-                padding-top: 56px;  
+                padding-top: 56px;
             }
         }
     }
 }
 
 @media (max-width: 390px) {
-    .roadmap{
-        &__title{
+    .roadmap {
+        &__title {
             padding-top: 95px;
         }
 
-        &__stars{
+        &__stars {
             width: 100%;
+        }
+    }
+}
+
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+
+.brands {
+    background: linear-gradient(180deg, rgba(36, 10, 92, 0.63) 8.97%, rgba(36, 11, 88, 0.30) 100%);
+    backdrop-filter: blur(150px);
+    background-color: #18072d;
+    width: 100%;
+    height: auto;
+    // transform: rotate(90deg);
+
+    &-background {
+        background-image: url(../img/brands/brush-background.png);
+    }
+
+    &__title {
+        padding-top: 108px;
+        color: #FFF;
+        text-align: center;
+        font-family: 'Plus Jakarta Display';
+        font-size: clamp(16px, 2.5vw, 20px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        /* 28px */
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        padding-top: 22px;
+        color: #FFF;
+        text-align: center;
+        font-family: 'HeliosExtC';
+        font-size: clamp(28px, 2.5vw, 45px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 109%;
+        /* 49.05px */
+        text-transform: uppercase;
+    }
+
+    &-content {
+        padding-top: 90px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1350px;
+        width: 100%;
+        margin: 0 auto;
+        gap: 15px;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        // padding: 0 15px;
+
+        &__img {
+            max-width: 100%;
+        }
+
+        &__title::after {
+            content: '';
+            position: absolute;
+            top: 55px;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            border-radius: 48px;
+            background: #06D6DF;
+            box-shadow: 0px 0px 4px 0px rgba(56, 219, 255, 0.50);
+        }
+
+        &__title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(/img/brands/first-item-textLight.png);
+        }
+
+
+        &__title {
+            padding-top: 118px;
+            color: #FFF;
+            text-align: center;
+            font-family: 'HeliosExtC';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%;
+            /* 22.4px */
+            text-transform: uppercase;
+            width: 100%;
+            position: relative;
+        }
+
+        &__text {
+            padding-top: 7px;
+            color: #FFF;
+            text-align: center;
+            font-family: 'Plus Jakarta Display';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 160%;
+            /* 28.8px */
+            letter-spacing: 0.18px;
+            max-width: 385px;
+            opacity: 0.6;
+        }
+
+    }
+}
+
+@media (max-width: 1300px) {
+    .brands {
+        &-content {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .brands {
+        &-item {
+            &__title::after {
+                width: 90%;
+                left: 17px;
+            }
+
+            &__title::before {
+                width: 90%;
+                left: 17px;
+            }
         }
     }
 }
