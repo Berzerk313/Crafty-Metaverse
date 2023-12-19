@@ -88,11 +88,12 @@
 
         <section id="about" class="about">
             <div class="about__background">
-                <div class="container">
-                    <div class="about-content">
-                        <div class="about__people">
-                            <img src="./img/about/people.png" alt="people">
-                        </div>
+
+                <div class="about-content">
+                    <div class="about__people">
+                        <img src="./img/about/people.png" alt="people">
+                    </div>
+                    <div class="container">
                         <div class="about-info">
                             <h2 class="about-info__title">Profile</h2>
                             <h3 class="about-info__subtitle">About Us</h3>
@@ -146,6 +147,11 @@
                     <div class="roadmap__title">Our Way</div>
                     <div class="roadmap__subtitle">Roadmap</div>
                     <div class="roadmap-content">
+                        <picture>
+                            <source srcset="./img/roadmap/mobile/Stars-mobile.png" media="(max-width: 768px)" />
+                            <img src="./img/roadmap/Stars.png" alt="stars" class="roadmap__stars">
+                        </picture>
+
                         <div class="roadmap-item-first">
                             <div class="roadmap-item-info">
                                 <h2 class="roadmap-item-info__title">Q1 <br>Governance Token <br>Launch on BSC ($CMETA)
@@ -180,7 +186,10 @@
                                 </div>
                             </div>
                             <div class="roadmap-item-circle">
-                                <div class="roadmap-item-circle__pulse-first">
+                                <div class="roadmap-item-circle__pulse pulse_first">
+                                    <div class="roadmap-item-circle__pulse-around-center pulse-around-center_first">
+                                    </div>
+                                    <div class="roadmap-item-circle__pulse-center pulse-center_first"></div>
                                     <span style="--i:0;"></span>
                                     <span style="--i:1;"></span>
                                     <span style="--i:2;"></span>
@@ -190,37 +199,50 @@
                             </div>
                         </div>
                         <div class="roadmap-item-second">
-                            <div class="roadmap-item-info">
-                                <h2 class="roadmap-item-info__title">Q2 <br>CMETA Ecosystem Begins</h2>
-                                <div class="roadmap-item-info-textblock">
-                                    <h3 class="roadmap-item-info-textblock__text">CMETA Staking Release</h3>
-                                    <h3 class="roadmap-item-info-textblock__text">SANKOFA Sidechain DEV Starts ($KOFA) ·
-                                        CEX Listings and Marketing · Governance Token Launch on SOL ($CMETA)</h3>
-                                    <h3 class="roadmap-item-info-textblock__text">Bridge BSC, ETH Smart Contracts to
-                                        Solana Contract
-                                        · Social Media Marketing Pushü</h3>
-                                    <h3 class="roadmap-item-info-textblock__text">10K Telegram Members</h3>
-                                    <h3 class="roadmap-item-info-textblock__text">10K Twitter Followers</h3>
-                                </div>
-                                <div class="roadmap-item-info-nav">
-                                    <h4 class="roadmap-item-info-nav__text">More</h4>
-                                    <div class="roadmap-item-info-nav__arrow">
-                                        <img src="./img/roadmap/vector-for-info.svg" alt="arrow"
-                                            class="roadmap-item-info-nav__arrow-img">
+                            <div class="roadmap-item-wrapper">
+                                <div class="roadmap-item-info">
+                                    <h2 class="roadmap-item-info__title">Q2 <br>CMETA Ecosystem Begins</h2>
+                                    <div class="roadmap-item-info-textblock">
+                                        <h3 class="roadmap-item-info-textblock__text">CMETA Staking Release</h3>
+                                        <h3 class="roadmap-item-info-textblock__text">SANKOFA Sidechain DEV Starts
+                                            ($KOFA)
+                                        </h3>
+                                        <ul>
+                                            <li>CEX Listings and Marketing</li>
+                                            <li>Governance Token Launch on SOL ($CMETA)</li>
+                                        </ul>
+                                        <h3 class="roadmap-item-info-textblock__text">Bridge BSC, ETH Smart Contracts to
+                                            Solana Contract</h3>
+                                        <ul>
+                                            <li>Social Media Marketing Pushü</li>
+                                        </ul>
+                                        <h3 class="roadmap-item-info-textblock__text">10K Telegram Members</h3>
+                                        <h3 class="roadmap-item-info-textblock__text">10K Twitter Followers</h3>
                                     </div>
-                                </div>
-                                <div class="roadmap-item-info__content">
-                                    <h5 class="roadmap-item-info__content-text">Launch Date: Jan 8th, 2022 Contract
-                                        Audit</h5>
-                                    <h5 class="roadmap-item-info__content-text">TechAudit Completed on Jan 21st, 2022 5k
-                                        Telegram members</h5>
-                                    <h5 class="roadmap-item-info__content-text">32k Telegram Members. CG and CMC
-                                        listings</h5>
-                                    <h5 class="roadmap-item-info__content-text">Application Sent CEX Listings</h5>
+                                    <div class="roadmap-item-info-nav">
+                                        <h4 class="roadmap-item-info-nav__text">More</h4>
+                                        <div class="roadmap-item-info-nav__arrow">
+                                            <img src="./img/roadmap/vector-for-info.svg" alt="arrow"
+                                                class="roadmap-item-info-nav__arrow-img">
+                                        </div>
+                                    </div>
+                                    <div class="roadmap-item-info__content">
+                                        <h5 class="roadmap-item-info__content-text">Launch Date: Jan 8th, 2022 Contract
+                                            Audit</h5>
+                                        <h5 class="roadmap-item-info__content-text">TechAudit Completed on Jan 21st,
+                                            2022 5k
+                                            Telegram members</h5>
+                                        <h5 class="roadmap-item-info__content-text">32k Telegram Members. CG and CMC
+                                            listings</h5>
+                                        <h5 class="roadmap-item-info__content-text">Application Sent CEX Listings</h5>
+                                    </div>
                                 </div>
                             </div>
                             <div class="roadmap-item-circle">
-                                <div class="roadmap-item-circle__pulse-second">
+                                <div class="roadmap-item-circle__pulse pulse_second">
+                                    <div class="roadmap-item-circle__pulse-around-center pulse-around-center_second">
+                                    </div>
+                                    <div class="roadmap-item-circle__pulse-center pulse-center_second"></div>
                                     <span style="--i:0;"></span>
                                     <span style="--i:1;"></span>
                                     <span style="--i:2;"></span>
@@ -237,19 +259,24 @@
                                 <div class="roadmap-item-info-textblock">
                                     <h3 class="roadmap-item-info-textblock__text">Implement In-Game Staking ($KOFA
                                         Rewards)</h3>
-                                    <h3 class="roadmap-item-info-textblock__text">In-Game NFT Released
-                                        · SANKOFA Sidechain on Test Net</h3>
+                                    <h3 class="roadmap-item-info-textblock__text">In-Game NFT Released</h3>
+                                    <ul>
+                                        <li>SANKOFA Sidechain on Test Net</li>
+                                    </ul>
                                     <h3 class="roadmap-item-info-textblock__text">Fiat On-Ramp Added</h3>
-                                       <ul>
+                                    <ul>
                                         <li>Gameplay Battle Mode Introduced</li>
                                         <li>Marketplace Introduced</li>
                                         <li>CEX Listings and Marketing</li>
-                                       </ul>
-                                        
+                                    </ul>
+
                                 </div>
                             </div>
                             <div class="roadmap-item-circle">
-                                <div class="roadmap-item-circle__pulse-third">
+                                <div class="roadmap-item-circle__pulse pulse_third">
+                                    <div class="roadmap-item-circle__pulse-around-center pulse-around-center_third">
+                                    </div>
+                                    <div class="roadmap-item-circle__pulse-center pulse-center_third"></div>
                                     <span style="--i:0;"></span>
                                     <span style="--i:1;"></span>
                                     <span style="--i:2;"></span>
@@ -259,27 +286,36 @@
                             </div>
                         </div>
                         <div class="roadmap-item-fourth">
-                            <div class="roadmap-item-info">
-                                <h2 class="roadmap-item-info__title">Q4 <br>SANKOFA Mainnet Launch</h2>
-                                <div class="roadmap-item-info-textblock">
-                                    <h3 class="roadmap-item-info-textblock__text"> Migrate Guardians of Lost Worlds to
-                                        SANKOFA Sidechain
-                                        · CEX Listings & Marketing
-                                        · Virtual Arts Studio Introduced
-                                        · Mobile Beta Gameplay Revealed
-                                        · CMETA DEX Introduced: FORGE</h3>
-                                    <h3 class="roadmap-item-info-textblock__text">Multi-Network Implementation
-                                        · VR Game Dev Begins</h3>
+                            <div class="roadmap-item-wrapper">
+                                <div class="roadmap-item-info">
+                                    <h2 class="roadmap-item-info__title">Q4 <br>SANKOFA Mainnet Launch</h2>
+                                    <div class="roadmap-item-info-textblock">
+                                        <h3 class="roadmap-item-info-textblock__text"> Migrate Guardians of Lost Worlds
+                                            to
+                                            SANKOFA Sidechain</h3>
+                                        <ul>
+                                            <li>CEX Listings & Marketing</li>
+                                            <li>Virtual Arts Studio Introduced</li>
+                                            <li>Mobile Beta Gameplay Revealed</li>
+                                            <li>CMETA DEX Introduced: FORGE</li>
+                                        </ul>
+                                        <h3 class="roadmap-item-info-textblock__text">Multi-Network Implementation</h3>
+                                        <ul>
+                                            <li>VR Game Dev Begins</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="roadmap-item-circle">
-                                <div class="roadmap-item-circle__pulse-fourth">
-                                    <div class="roadmap-item-circle__pulse-center"></div>
+                                <div class="roadmap-item-circle__pulse pulse_fourth">
+                                    <div class="roadmap-item-circle__pulse-around-center pulse-around-center_fourth">
+                                    </div>
+                                    <div class="roadmap-item-circle__pulse-center pulse-center_fourth"></div>
                                     <span style="--i:0;"></span>
                                     <span style="--i:1;"></span>
                                     <span style="--i:2;"></span>
                                     <span style="--i:3;"></span>
-                                
+
                                 </div>
                                 <!-- <img src="./img/roadmap/fourth-circle.png" alt="circle"
                                     class="roadmap-item-circle__img"> -->

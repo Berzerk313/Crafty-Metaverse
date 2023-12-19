@@ -697,6 +697,12 @@ body {
 
 @media (max-width: 390px) {
     .about {
+
+        &__background {
+            background-image: none;
+            background-color: #01001F;
+            height: 1078px;;
+        }
         &-content {
             padding-top: 0;
             position: relative;
@@ -708,6 +714,8 @@ body {
             top: 0;
             left: 0;
             width: 100%;
+            // height: 400px;
+            // background-image: url(../img/about/people.png);
 
             img {
 
@@ -718,7 +726,6 @@ body {
 
         &-info {
             margin-top: 444px;
-
             &__title {
                 padding-top: 0;
             }
@@ -763,14 +770,14 @@ body {
 //////////////////////////////
 
 .roadmap {
-    
+
     &-background {
         background: #090812;
         // padding-bottom: 210px;
     }
 
     &__title {
-        padding-top: 220px;
+        padding-top: 215px;
         color: #FFF;
         text-align: center;
         font-family: 'Plus Jakarta Display';
@@ -801,46 +808,55 @@ body {
         display: flex;
         flex-direction: column;
         padding-bottom: 210px;
+        position: relative;
         // grid-template-columns: repeat(1fr);
-        
+
+    }
+
+    &__stars{
+        position: absolute;
+        top: 6%;
+        left: 47%;
+        transform: translateX(-53%);
     }
 
     &-item-first {
         display: flex;
-        padding: 85px 0 0 70px;
+        padding: 90px 0 0 70px;
     }
 
     &-item-second {
         display: flex;
         // justify-content: right;
         justify-content: end;
-        padding: 80px 87px 0 0;
+        padding: 76px 55px 0 0;
+
         .roadmap-item-circle {
             order: 1;
         }
 
-        .roadmap-item-info {
+        .roadmap-item-wrapper{
             order: 2;
         }
     }
 
     &-item-third {
         display: flex;
-        padding: 48px 0 0 45px;
+        padding: 10px 0 0 45px;
     }
 
     &-item-fourth {
         display: flex;
         // justify-content: right;
         justify-content: end;
-        padding: 238px 44px 0px 0;
-       
+        padding: 208px 10px 0px 0;
+
 
         .roadmap-item-circle {
             order: 1;
         }
 
-        .roadmap-item-info {
+        .roadmap-item-wrapper {
             order: 2;
         }
     }
@@ -848,9 +864,9 @@ body {
     &-item-info {
         display: flex;
         flex-direction: column;
-        max-width: 418px;
+        max-width: 450px;
         position: relative;
-       
+
 
         &__title {
             color: #FFF;
@@ -858,7 +874,7 @@ body {
             font-size: clamp(20px, 2.5vw, 22px);
             font-style: normal;
             font-weight: 700;
-            line-height: 130%;
+            line-height: 127%;
             padding-top: 4px;
             /* 30.8px */
         }
@@ -874,7 +890,7 @@ body {
                 font-size: clamp(15px, 2.5vw, 18px);
                 font-style: normal;
                 font-weight: 400;
-                line-height: 117%;
+                line-height: 119%;
                 /* 25.2px */
                 letter-spacing: 0.18px;
                 opacity: 0.8;
@@ -890,12 +906,33 @@ body {
                 top: 15px;
                 left: 0px;
             }
-            &__text:last-child{
+
+            &__text:last-child {
                 margin-bottom: 23px;
+            }
+
+            li{
+                // padding-top: 15px;
+                padding-left: 60px;
+                color: #FFF;
+                font-family: 'Plus Jakarta Display';
+                font-size: clamp(15px, 2.5vw, 18px);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                /* 25.2px */
+                letter-spacing: 0.18px;
+                opacity: 0.8;
+                position: relative;
+            }
+            li:before{
+                content: '.';
+                position: absolute;
+                bottom: 15%;
+                left: 7%;
             }
         }
 
-       
 
         &-nav {
             display: flex;
@@ -903,6 +940,7 @@ body {
             justify-content: center;
             gap: 9px;
             cursor: pointer;
+
             &__text {
                 color: #FFF;
                 font-family: 'HeliosExtC';
@@ -983,44 +1021,35 @@ body {
 
     &-item-circle {
         position: relative;
-        &__pulse-first{
-            position: relative;
-            width: 80px;
-            height: 80px;
-            background: rgb(131,48,254);
-            border-radius: 50%;
-            margin: 25px 0 0 26px;
 
-        }
-        
-        &__pulse-second{
+        &__pulse {
             position: relative;
             width: 80px;
             height: 80px;
-            background: rgb(255,134,255);
             border-radius: 50%;
+        }
+
+        .pulse_first {
+            background: rgb(131, 48, 254);
+            margin: 25px 0px 0 0px;
+        }
+
+        .pulse_second {
+            background: rgb(255, 134, 255);
             margin-right: 65px;
         }
 
-        &__pulse-third{
-            position: relative;
-            width: 80px;
-            height: 80px;
-            background: rgb(65,251,191);
-            border-radius: 50%;
+        .pulse_third {
+            background: rgb(65, 251, 191);
             margin: 17px 0 0 35px;
         }
 
-        &__pulse-fourth{
-            position: relative;
-            width: 80px;
-            height: 80px;
-            background: rgb(72,132,255);
-            border-radius: 50%;
+        .pulse_fourth {
+            background: rgb(72, 132, 255);
             margin: 25px 60px 0 0;
         }
 
-        &__pulse-first span{
+        &__pulse span {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -1031,60 +1060,222 @@ body {
             animation-delay: calc(1s * var(--i));
         }
 
-        &__pulse-second span{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: .8;
-            background: inherit;
-            border-radius: inherit;
-            animation: pulseAnimate 4s ease-in-out infinite;
-            animation-delay: calc(1s * var(--i));
+        @keyframes pulseAnimate {
+            100% {
+                opacity: 0;
+                transform: scale(2);
+            }
         }
 
-        &__pulse-third span{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: .8;
-            background: inherit;
-            border-radius: inherit;
-            animation: pulseAnimate 4s ease-in-out infinite;
-            animation-delay: calc(1s * var(--i));
-        }
-
-        &__pulse-fourth span{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: .8;
-            background: inherit;
-            border-radius: inherit;
-            animation: pulseAnimate 4s ease-in-out infinite;
-            animation-delay: calc(1s * var(--i));
-        }
-
-        &__pulse-center{
+        &__pulse-center {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translateX(-50%) translateY(-50%);
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;
             width: 40px;
             height: 40px;
-            background: rgb(135,237,255);
             border-radius: 50%;
             z-index: 3;
             opacity: 0.5;
         }
 
-        @keyframes pulseAnimate { 
-            100%{
-                opacity: 0;
-                transform: scale(2);
+        .pulse-center_first {
+            background: rgb(255,222,255);
+        }
+
+        .pulse-center_second {
+            background: rgb(255,236,255);
+        }
+
+        .pulse-center_third {
+            background: rgb(235,255,255);
+        }
+
+        .pulse-center_fourth {
+            background: rgb(233, 255, 255);
+        }
+
+        &__pulse-around-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            z-index: 3;
+            opacity: 0.5;
+        }
+
+        .pulse-around-center_first {
+            background: rgb(223,90,255);
+        }
+
+        .pulse-around-center_second {
+            background: rgb(253,155,235);
+        }
+
+        .pulse-around-center_third {
+            background: rgb(141,255,255);
+        }
+
+        .pulse-around-center_fourth {
+            background: rgb(135, 237, 255);
+        }
+
+    }
+}
+
+@media (max-width: 1240px) {
+    .roadmap {
+        &-item-info {
+            &__content{
+                position: static;
             }
+        }
+
+        &-item-third {
+            padding: 60px 0 0 45px;
+        }
+
+        &-item-fourth {
+            padding: 50px 10px 0px 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .roadmap {
+        &-content{
+            padding-bottom: 160px;
+        }
+        &-item-circle__pulse {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        &-item-circle__pulse-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            z-index: 3;
+            opacity: 0.5;
+        }
+        &-item-circle__pulse-around-center {
+            width: 30px;
+            height: 30px;
+
+        }
+        &-item-info-textblock{
+            padding-top: 10px;
+            &__text{
+                padding-top: 17.96px;
+            }
+            li:before{
+                content: '.';
+                position: absolute;
+                bottom: 16%;
+                left: 12%;
+            }
+        }
+       
+        &-item-first{
+            flex-direction: column;
+            padding: 18px 0 0 0;
+            .roadmap-item-circle {
+                display: flex;
+                justify-content: end;
+                order: 1;
+                .pulse_first {
+                    background: rgb(131, 48, 254);
+                    margin: 50px 63px 0 0px;
+                }
+            }
+    
+            .roadmap-item-info {
+                padding-top: 0;
+                order: 2;
+                &__title{
+                    padding-top: 8px;
+                }
+                
+            }
+        }
+
+        &-item-wrapper {
+            display: flex;
+            justify-content: end;
+        }
+        &-item-second{
+            flex-direction: column-reverse;
+            padding: 70px 0px 0 0;
+            width: 100%;
+            .roadmap-item-circle {
+                .pulse_second {
+                    background: rgb(255, 134, 255);
+                    margin: 0px 0px 0px 60px;
+                }
+            }
+            .roadmap-item-wrapper{
+                order: 1;
+            }
+            .roadmap-item-info{
+                justify-content: end;
+                padding-top: 40px;
+                
+            }
+        }
+        &-item-third{
+            flex-direction: column;
+            padding: 27px 0 0 0px;
+            .roadmap-item-circle {
+                display: flex;
+                justify-content: end;
+                order: 1;
+                .pulse_third {
+                    background: rgb(65, 251, 191);
+                    margin: 0px 60px 0 0px;
+                }
+            }
+    
+            .roadmap-item-info {
+                order: 2;
+                padding-top: 40px;
+            }
+        }
+        &-item-fourth{
+            flex-direction: column-reverse;
+            padding: 50px 0px 0px 0;
+            .roadmap-item-circle {
+                .pulse_fourth {
+                    background: rgb(72, 132, 255);
+                    margin: 22px 0px 0 45px;
+                }
+            }
+            .roadmap-item-wrapper{
+                order: 1;
+            }   
+            .roadmap-item-info{
+                justify-content: end;
+                padding-top: 56px;  
+            }
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .roadmap{
+        &__title{
+            padding-top: 95px;
+        }
+
+        &__stars{
+            width: 100%;
         }
     }
 }
