@@ -263,9 +263,6 @@ body {
   }
 }
 .shared {
-  z-index: 1;
-}
-.shared__background {
   background-image: url(../img/shared/background.webp), url(../img/shared/background.png);
   background-size: cover;
   width: 100%;
@@ -377,7 +374,7 @@ body {
   background: linear-gradient(99deg, #7A42F4 0%, #4642F4 100%), #FFF;
   transition: all 0.5s ease;
 }
-.shared-info__button-text {
+.shared-info__button span {
   color: #FFF;
   font-family: "HeliosBlackC";
   font-size: clamp(16.219px, 2.5vw, 18px);
@@ -392,7 +389,7 @@ body {
 }
 
 @media (max-width: 700px) {
-  .shared__background {
+  .shared {
     background-image: url(../img/shared/mobile/background-mobile.webp), url(../img/shared/mobile/background-mobile.png);
     background-size: cover;
     width: 100%;
@@ -419,7 +416,7 @@ body {
     height: 28.162px;
   }
 }
-.about__background {
+.about {
   background-image: url(../img/about/background.webp), url(../img/about/background.png);
   background-size: cover;
   width: 100%;
@@ -632,7 +629,7 @@ body {
     padding-top: 82px;
   }
 }
-.roadmap-background {
+.roadmap {
   background: #090812;
 }
 .roadmap__title {
@@ -1062,8 +1059,6 @@ body {
   background-color: #18072d;
   width: 100%;
   height: auto;
-}
-.brands-background {
   background-image: url(../img/brands/brush-background.webp), url(../img/brands/brush-background.png);
 }
 .brands__title {

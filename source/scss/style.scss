@@ -272,15 +272,12 @@ body {
 ////////////////////////////////
 
 .shared {
-    z-index: 1;
+    background-image: url(../img/shared/background.webp), url(../img/shared/background.png);
+    background-size: cover;
+    width: 100%;
+    height: 1010px;
+    z-index: -3;
 
-    &__background {
-        background-image: url(../img/shared/background.webp), url(../img/shared/background.png);
-        background-size: cover;
-        width: 100%;
-        height: 1010px;
-        z-index: -3;
-    }
 
     &-blurs {
         position: relative;
@@ -365,11 +362,11 @@ body {
         // right: -100px;
         // z-index: -1;
         position: absolute;
-    width: 1249px;
-    height: 888px;
-    top: 444px;
-    right: -131px;
-    max-width: 100%;
+        width: 1249px;
+        height: 888px;
+        top: 444px;
+        right: -131px;
+        max-width: 100%;
         vertical-align: top;
         overflow: clip;
     }
@@ -443,9 +440,7 @@ body {
             background: linear-gradient(99deg, #7A42F4 0%, #4642F4 100%), #FFF;
             transition: all 0.5s ease;
 
-
-
-            &-text {
+            span {
                 color: #FFF;
                 font-family: 'HeliosBlackC';
                 font-size: clamp(16.219px, 2.5vw, 18px);
@@ -466,13 +461,10 @@ body {
 
 @media (max-width: 700px) {
     .shared {
-        &__background {
-            background-image: url(../img/shared/mobile/background-mobile.webp), url(../img/shared/mobile/background-mobile.png);
-            background-size: cover;
-            width: 100%;
-            max-height: 787px;
-            // height: 1050px;
-        }
+        background-image: url(../img/shared/mobile/background-mobile.webp), url(../img/shared/mobile/background-mobile.png);
+        background-size: cover;
+        width: 100%;
+        max-height: 787px;
 
         &-content {
             padding-top: 265px;
@@ -509,12 +501,10 @@ body {
 ////////////////////////////////
 
 .about {
-    &__background {
-        background-image: url(../img/about/background.webp), url(../img/about/background.png);
-        background-size: cover;
-        width: 100%;
-        height: 1038px;
-    }
+    background-image: url(../img/about/background.webp), url(../img/about/background.png);
+    background-size: cover;
+    width: 100%;
+    height: 1038px;
 
     &-content {
         padding-top: 250px;
@@ -805,11 +795,7 @@ body {
 //////////////////////////////
 
 .roadmap {
-
-    &-background {
-        background: #090812;
-        // padding-bottom: 210px;
-    }
+    background: #090812;
 
     &__title {
         padding-top: 215px;
@@ -918,6 +904,8 @@ body {
             padding-top: 5px;
 
             &__text {
+                // display: inline-block;
+                // list-style-type: none;
                 padding-top: 15px;
                 padding-left: 37px;
                 color: #FFF;
@@ -1346,11 +1334,9 @@ body {
     background-color: #18072d;
     width: 100%;
     height: auto;
-    // transform: rotate(90deg);
+    background-image: url(../img/brands/brush-background.webp), url(../img/brands/brush-background.png);
 
-    &-background {
-        background-image: url(../img/brands/brush-background.webp), url(../img/brands/brush-background.png);
-    }
+    // transform: rotate(90deg);
 
     &__title {
         padding-top: 108px;
@@ -1590,3 +1576,130 @@ body {
 //////////////////////////////
 //////////////////////////////
 
+.resourses {
+    //     background: #090812;
+
+    //     &__title {
+    //         color: #FFF;
+    //         text-align: center;
+    //         font-family: 'Plus Jakarta Display';
+    //         font-size: clamp(16px, 2.5vw, 20px);
+    //         font-style: normal;
+    //         font-weight: 400;
+    //         line-height: 140%;
+    //         /* 28px */
+    //         text-transform: uppercase;
+    //     }
+
+    //     &__subtitle {
+    //         color: #FFF;
+    //         text-align: center;
+    //         font-family: 'HeliosExtC';
+    //         font-size: clamp(28px, 2.5vw, 45px);
+    //         font-style: normal;
+    //         font-weight: 700;
+    //         line-height: 140%;
+    //         /* 63px */
+    //         text-transform: uppercase;
+    //     }
+
+    //     &-content {
+    //         display: flex;
+    //     }
+
+    //     &-left {
+    //         display: flex;
+    //         flex-direction: column;
+    //         align-items: center;
+    //         justify-content: center;
+
+    //         &__logo {
+    //             max-width: 100%;
+    //         }
+
+    //         &__title {
+    //             color: #FFF;
+    //             font-family: 'HeliosExtC';
+    //             font-size: clamp(24px, 2.5vw, 35px);
+    //             font-style: normal;
+    //             font-weight: 700;
+    //             line-height: 109%;
+    //             /* 38.15px */
+    //             text-transform: uppercase;
+    //         }
+
+    //         &__text {
+    //             color: rgba(255, 255, 255, 0.70);
+    //             text-align: center;
+    //             font-family: 'Gilroy';
+    //             font-size: clamp(16px, 2.5vw, 20px);
+    //             font-style: normal;
+    //             font-weight: 400;
+    //             line-height: 160%;
+    //             /* 32px */
+    //         }
+
+    //         &__button {
+    //             border-radius: 6px;
+    //             border: 1px solid rgba(255, 255, 255, 0.56);
+    //             background: linear-gradient(99deg, #7A42F4 0%, #4642F4 100%), #FFF;
+
+    //             display: flex;
+    //             max-width: 254px;
+    //             max-height: 60px;
+    //             padding: 16px 24px;
+    //             justify-content: center;
+    //             align-items: center;
+    //             gap: 10px;
+    //             flex-shrink: 0;
+
+    //             span {
+    //                 color: #FFF;
+    //                 font-family: 'HeliosBlackC';
+    //                 font-size: 18px;
+    //                 font-style: normal;
+    //                 font-weight: 900;
+    //                 line-height: 145%;
+    //             }
+    //         }
+
+    //         &__star {
+    //             max-width: 100%;
+    //         }
+    //     }
+
+    //     &-right {
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: center;
+
+    //         &__big-logo {
+    //             max-width: 100%;
+    //         }
+
+    //         &__block {
+    //             display: flex;
+    //         }
+
+    //         &__icon {
+    //             max-width: 100%;
+    //         }
+
+    //         &__icon-first {}
+
+    //         &__text {
+    //             color: rgba(255, 255, 255, 0.70);
+    //             font-family: 'Gilroy';
+    //             font-size: clamp(12.685px, 2.5vw, 20px);
+    //             font-style: normal;
+    //             font-weight: 400;
+    //             line-height: 160%;
+    //         }
+
+    //         &__icon-second {}
+
+    //         &__icon-third {}
+
+    //         &__icon-fourth {}
+    //     }
+}
