@@ -900,10 +900,10 @@ body {
             /* 30.8px */
         }
 
-        &-textblock {
+        &__textblock {
             padding-top: 5px;
 
-            &__text {
+            &-text {
                 // display: inline-block;
                 // list-style-type: none;
                 padding-top: 15px;
@@ -920,7 +920,7 @@ body {
                 position: relative;
             }
 
-            &__text::before {
+            &-text::before {
                 content: "";
                 background-image: url(../img/roadmap/for-text.svg);
                 width: 24px;
@@ -930,11 +930,11 @@ body {
                 left: 0px;
             }
 
-            &__text:last-child {
+            &-text:last-child {
                 margin-bottom: 23px;
             }
 
-            li {
+            &-ul li {
                 // padding-top: 15px;
                 padding-left: 60px;
                 color: #FFF;
@@ -949,7 +949,8 @@ body {
                 position: relative;
             }
 
-            li:before {
+
+            &-ul li:before {
                 content: '.';
                 position: absolute;
                 bottom: 15%;
@@ -1577,129 +1578,130 @@ body {
 //////////////////////////////
 
 .resourses {
-    //     background: #090812;
+        background: #090812;
 
-    //     &__title {
-    //         color: #FFF;
-    //         text-align: center;
-    //         font-family: 'Plus Jakarta Display';
-    //         font-size: clamp(16px, 2.5vw, 20px);
-    //         font-style: normal;
-    //         font-weight: 400;
-    //         line-height: 140%;
-    //         /* 28px */
-    //         text-transform: uppercase;
-    //     }
+        &__title {
+            color: #FFF;
+            text-align: center;
+            font-family: 'Plus Jakarta Display';
+            font-size: clamp(16px, 2.5vw, 20px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            /* 28px */
+            text-transform: uppercase;
+        }
 
-    //     &__subtitle {
-    //         color: #FFF;
-    //         text-align: center;
-    //         font-family: 'HeliosExtC';
-    //         font-size: clamp(28px, 2.5vw, 45px);
-    //         font-style: normal;
-    //         font-weight: 700;
-    //         line-height: 140%;
-    //         /* 63px */
-    //         text-transform: uppercase;
-    //     }
+        &__subtitle {
+            color: #FFF;
+            text-align: center;
+            font-family: 'HeliosExtC';
+            font-size: clamp(28px, 2.5vw, 45px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%;
+            /* 63px */
+            text-transform: uppercase;
+        }
 
-    //     &-content {
-    //         display: flex;
-    //     }
+        &-content {
+            display: flex;
+            // gap: 100px;
+        }
 
-    //     &-left {
-    //         display: flex;
-    //         flex-direction: column;
-    //         align-items: center;
-    //         justify-content: center;
+        &-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
-    //         &__logo {
-    //             max-width: 100%;
-    //         }
+            &__logo {
+                max-width: 100%;
+            }
 
-    //         &__title {
-    //             color: #FFF;
-    //             font-family: 'HeliosExtC';
-    //             font-size: clamp(24px, 2.5vw, 35px);
-    //             font-style: normal;
-    //             font-weight: 700;
-    //             line-height: 109%;
-    //             /* 38.15px */
-    //             text-transform: uppercase;
-    //         }
+            &__title {
+                color: #FFF;
+                font-family: 'HeliosExtC';
+                font-size: clamp(24px, 2.5vw, 35px);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 109%;
+                /* 38.15px */
+                text-transform: uppercase;
+            }
 
-    //         &__text {
-    //             color: rgba(255, 255, 255, 0.70);
-    //             text-align: center;
-    //             font-family: 'Gilroy';
-    //             font-size: clamp(16px, 2.5vw, 20px);
-    //             font-style: normal;
-    //             font-weight: 400;
-    //             line-height: 160%;
-    //             /* 32px */
-    //         }
+            &__text {
+                color: rgba(255, 255, 255, 0.70);
+                text-align: center;
+                font-family: 'Gilroy';
+                font-size: clamp(16px, 2.5vw, 20px);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+                /* 32px */
+            }
 
-    //         &__button {
-    //             border-radius: 6px;
-    //             border: 1px solid rgba(255, 255, 255, 0.56);
-    //             background: linear-gradient(99deg, #7A42F4 0%, #4642F4 100%), #FFF;
+            &__button {
+                border-radius: 6px;
+                border: 1px solid rgba(255, 255, 255, 0.56);
+                background: linear-gradient(99deg, #7A42F4 0%, #4642F4 100%), #FFF;
 
-    //             display: flex;
-    //             max-width: 254px;
-    //             max-height: 60px;
-    //             padding: 16px 24px;
-    //             justify-content: center;
-    //             align-items: center;
-    //             gap: 10px;
-    //             flex-shrink: 0;
+                display: flex;
+                max-width: 254px;
+                max-height: 60px;
+                padding: 16px 24px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                flex-shrink: 0;
 
-    //             span {
-    //                 color: #FFF;
-    //                 font-family: 'HeliosBlackC';
-    //                 font-size: 18px;
-    //                 font-style: normal;
-    //                 font-weight: 900;
-    //                 line-height: 145%;
-    //             }
-    //         }
+                span {
+                    color: #FFF;
+                    font-family: 'HeliosBlackC';
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 145%;
+                }
+            }
 
-    //         &__star {
-    //             max-width: 100%;
-    //         }
-    //     }
+            &__star {
+                max-width: 100%;
+            }
+        }
 
-    //     &-right {
-    //         display: flex;
-    //         align-items: center;
-    //         justify-content: center;
+        &-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    //         &__big-logo {
-    //             max-width: 100%;
-    //         }
+            &__big-logo {
+                max-width: 100%;
+            }
 
-    //         &__block {
-    //             display: flex;
-    //         }
+            &__block {
+                display: flex;
+            }
 
-    //         &__icon {
-    //             max-width: 100%;
-    //         }
+            &__icon {
+                max-width: 100%;
+            }
 
-    //         &__icon-first {}
+            &__icon-first {}
 
-    //         &__text {
-    //             color: rgba(255, 255, 255, 0.70);
-    //             font-family: 'Gilroy';
-    //             font-size: clamp(12.685px, 2.5vw, 20px);
-    //             font-style: normal;
-    //             font-weight: 400;
-    //             line-height: 160%;
-    //         }
+            &__text {
+                color: rgba(255, 255, 255, 0.70);
+                font-family: 'Gilroy';
+                font-size: clamp(12.685px, 2.5vw, 20px);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+            }
 
-    //         &__icon-second {}
+            &__icon-second {}
 
-    //         &__icon-third {}
+            &__icon-third {}
 
-    //         &__icon-fourth {}
-    //     }
+            &__icon-fourth {}
+        }
 }
