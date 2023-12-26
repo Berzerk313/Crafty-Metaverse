@@ -269,6 +269,14 @@ body {
   height: 1010px;
   z-index: -3;
 }
+@media (max-width: 700px) {
+  .shared {
+    background-image: url(../img/shared/mobile/background-mobile.webp), url(../img/shared/mobile/background-mobile.png);
+    background-size: cover;
+    width: 100%;
+    max-height: 787px;
+  }
+}
 .shared-blurs {
   position: relative;
   z-index: 1;
@@ -389,12 +397,6 @@ body {
 }
 
 @media (max-width: 700px) {
-  .shared {
-    background-image: url(../img/shared/mobile/background-mobile.webp), url(../img/shared/mobile/background-mobile.png);
-    background-size: cover;
-    width: 100%;
-    max-height: 787px;
-  }
   .shared-content {
     padding-top: 265px;
   }
@@ -403,8 +405,8 @@ body {
   }
   .shared-info__button {
     margin-top: 12px;
-    width: 188.32px;
-    height: 54.063px;
+    width: 188px;
+    height: 54px;
   }
   .shared-info__subtitle-span-desctop {
     display: none;
@@ -412,8 +414,8 @@ body {
   .shared-info__subtitle-span-mobile {
     display: inline-block;
     background-image: url(../img/shared/mobile/plain.svg);
-    width: 28.162px;
-    height: 28.162px;
+    width: 28px;
+    height: 28px;
   }
 }
 .about {
@@ -661,7 +663,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding-bottom: 190px;
+  padding-bottom: 230px;
   position: relative;
 }
 .roadmap__stars {
@@ -677,7 +679,7 @@ body {
 .roadmap-item-second {
   display: flex;
   justify-content: end;
-  padding: 76px 55px 0 0;
+  padding: 106px 55px 0 0;
 }
 .roadmap-item-second .roadmap-item-circle {
   order: 1;
@@ -687,12 +689,12 @@ body {
 }
 .roadmap-item-third {
   display: flex;
-  padding: 10px 0 0 45px;
+  padding: 46px 0 0 45px;
 }
 .roadmap-item-fourth {
   display: flex;
   justify-content: end;
-  padding: 208px 10px 0px 0;
+  padding: 248px 10px 0px 0;
 }
 .roadmap-item-fourth .roadmap-item-circle {
   order: 1;
@@ -713,7 +715,7 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 127%;
-  padding-top: 4px;
+  padding-top: 14px;
   /* 30.8px */
 }
 .roadmap-item-info__textblock {
@@ -1240,10 +1242,11 @@ body {
     padding-bottom: 65px;
   }
 }
-.resourses {
+.resources {
   background: #090812;
 }
-.resourses__title {
+.resources__title {
+  padding-top: 91px;
   color: #FFF;
   text-align: center;
   font-family: "Plus Jakarta Display";
@@ -1254,7 +1257,8 @@ body {
   /* 28px */
   text-transform: uppercase;
 }
-.resourses__subtitle {
+.resources__subtitle {
+  padding-top: 22px;
   color: #FFF;
   text-align: center;
   font-family: "HeliosExtC";
@@ -1265,21 +1269,25 @@ body {
   /* 63px */
   text-transform: uppercase;
 }
-.resourses-content {
+.resources-content {
   display: flex;
 }
-.resourses-left {
+.resources-left {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  max-width: 680px;
+  height: 517px;
 }
-.resourses-left__logo {
+.resources-left__logo {
   max-width: 100%;
 }
-.resourses-left__title {
+.resources-left__title {
   color: #FFF;
   font-family: "HeliosExtC";
+  text-align: center;
   font-size: clamp(24px, 2.5vw, 35px);
   font-style: normal;
   font-weight: 700;
@@ -1287,7 +1295,7 @@ body {
   /* 38.15px */
   text-transform: uppercase;
 }
-.resourses-left__text {
+.resources-left__text {
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
   font-family: "Gilroy";
@@ -1295,9 +1303,10 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
+  max-width: 566.757px;
   /* 32px */
 }
-.resourses-left__button {
+.resources-left__button {
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.56);
   background: linear-gradient(99deg, #7A42F4 0%, #4642F4 100%), #FFF;
@@ -1310,7 +1319,7 @@ body {
   gap: 10px;
   flex-shrink: 0;
 }
-.resourses-left__button span {
+.resources-left__button span {
   color: #FFF;
   font-family: "HeliosBlackC";
   font-size: 18px;
@@ -1318,24 +1327,25 @@ body {
   font-weight: 900;
   line-height: 145%;
 }
-.resourses-left__star {
+.resources-left__star {
   max-width: 100%;
 }
-.resourses-right {
+.resources-right {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.resourses-right__big-logo {
+.resources-right__big-logo {
   max-width: 100%;
 }
-.resourses-right__block {
+.resources-right__block {
   display: flex;
 }
-.resourses-right__icon {
+.resources-right__icon {
   max-width: 100%;
 }
-.resourses-right__text {
+.resources-right__text {
   color: rgba(255, 255, 255, 0.7);
   font-family: "Gilroy";
   font-size: clamp(12.685px, 2.5vw, 20px);
