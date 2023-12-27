@@ -1,39 +1,42 @@
 @import "./nullstyle.scss";
 
 @font-face {
-    font-family: 'HeliosBlackC';
+    font-family: 'HeliosBlackC_Regular';
     src: local('HeliosBlackC'), local('HeliosBlackC'),
-        url('../fonts/HeliosBlackC_Regular.otf') format("opentype");
-    // url('../fonts/HeliosBlackC.eot') format('embedded-opentype'),
-    // url('../fonts/HeliosBlackC.woff') format('woff'),
-    // url('../fonts/HeliosBlackC.ttf') format('truetype');
+        // url('../fonts/HeliosBlackC_Regular.otf') format("opentype");
+        // url('../fonts/HeliosBlackC.eot') format('embedded-opentype'),
+        url('../fonts/HeliosBlackC-Regular.woff') format('woff'),
+        url('../fonts/HeliosBlackC-Regular.woff2') format('woff2'),
+        url('../fonts/HeliosBlackC-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 
-    font-family: 'HeliosBlackC';
-    src: local('HeliosBlackC'), local('HeliosBlackC'),
-        url('../fonts/heliosblackc.otf') format("opentype");
-    // url('../fonts/HeliosBlackC.eot') format('embedded-opentype'),
-    // url('../fonts/HeliosBlackC.woff') format('woff'),
-    // url('../fonts/HeliosBlackC.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
+    // font-family: 'HeliosBlackC';
+    // src: local('HeliosBlackC'), local('HeliosBlackC'),
+    //     // url('../fonts/heliosblackc.otf') format("opentype");
+    //     // url('../fonts/HeliosBlackC.eot') format('embedded-opentype'),
+    //     // url('../fonts/HeliosBlackC.woff') format('woff'),
+    //     // url('../fonts/HeliosBlackC.ttf') format('truetype');
+    //     font-weight: 900;
+    // font-style: normal;
 
-    font-family: 'HeliosExtC';
+    font-family: 'HeliosExtC_Regular';
     src: local('HeliosExtC'), local('HeliosExtC'),
-        url('../fonts/HeliosExtC_Regular.otf') format("opentype");
-    //  url('../fonts/HeliosExtC.eot') format('embedded-opentype'),
-    // url('../fonts/HeliosExtC.woff') format('woff'),
-    // url('../fonts/HeliosExtC.ttf') format('truetype');
+        // url('../fonts/HeliosExtC_Regular.otf') format("opentype");
+        //  url('../fonts/HeliosExtC.eot') format('embedded-opentype'),
+        url('../fonts/HeliosExtC-Regular.woff') format('woff'),
+        url('../fonts/HeliosExtC-Regular.woff2') format('woff2'),
+        url('../fonts/HeliosExtC-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 
-    font-family: 'HeliosExtC';
+    font-family: 'HeliosExtC_Bolt';
     src: local('HeliosExtC'), local('HeliosExtC'),
-        url('../fonts/HeliosExtC_Bold.otf') format("opentype");
-    //  url('../fonts/HeliosExtC.eot') format('embedded-opentype'),
-    // url('../fonts/HeliosExtC.woff') format('woff'),
-    // url('../fonts/HeliosExtC.ttf') format('truetype');
+        // url('../fonts/HeliosExtC_Bold.otf') format("opentype");
+        //  url('../fonts/HeliosExtC.eot') format('embedded-opentype'),
+        url('../fonts/HeliosExtC-Bolt.woff') format('woff'),
+        url('../fonts/HeliosExtC-Bolt.woff2') format('woff2'),
+        url('../fonts/HeliosExtC-Bolt.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 
@@ -429,7 +432,7 @@ body {
 
         &__subtitle {
             color: #FFF;
-            font-family: 'HeliosExtC';
+            font-family: 'HeliosExtC_Bolt';
             font-size: clamp(26px, 2.5vw, 48px);
             font-style: normal;
             font-weight: 700;
@@ -465,7 +468,7 @@ body {
 
             span {
                 color: #FFF;
-                font-family: 'HeliosBlackC';
+                font-family: 'HeliosBlackC_Regular';
                 font-size: clamp(16.219px, 2.5vw, 18px);
                 font-style: normal;
                 font-weight: 900;
@@ -577,7 +580,7 @@ body {
         &__subtitle {
             color: #FFF;
             text-align: left;
-            font-family: 'HeliosExtC';
+            font-family: 'HeliosExtC_Bolt';
             font-size: clamp(28px, 2.5vw, 45px);
             font-style: normal;
             font-weight: 700;
@@ -589,7 +592,7 @@ body {
         }
     }
 
-    
+
     &-info::after {
         content: "";
         position: absolute;
@@ -646,7 +649,7 @@ body {
 
         &-text {
             color: #FFF;
-            font-family: 'HeliosExtC';
+            font-family: 'HeliosExtC_Bolt';
             font-size: clamp(16px, 2.5vw, 18px);
             font-style: normal;
             font-weight: 700;
@@ -857,7 +860,7 @@ body {
         padding-top: 16px;
         color: #FFF;
         text-align: center;
-        font-family: 'HeliosExtC';
+        font-family: 'HeliosExtC_Bolt';
         font-size: clamp(28px, 2.5vw, 45px);
         font-style: normal;
         font-weight: 700;
@@ -1012,7 +1015,7 @@ body {
 
             &__text {
                 color: #FFF;
-                font-family: 'HeliosExtC';
+                font-family: 'HeliosExtC_Bolt';
                 font-size: clamp(16px, 2.5vw, 18px);
                 font-style: normal;
                 font-weight: 700;
@@ -1468,7 +1471,7 @@ body {
             padding-top: 110px;
             color: #FFF;
             text-align: center;
-            font-family: 'HeliosExtC';
+            font-family: 'HeliosExtC_Bolt';
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
@@ -1642,7 +1645,7 @@ body {
         padding-top: 18px;
         color: #FFF;
         text-align: center;
-        font-family: 'HeliosExtC';
+        font-family: 'HeliosExtC_Bolt';
         font-size: clamp(28px, 2.5vw, 45px);
         font-style: normal;
         font-weight: 700;
@@ -1715,7 +1718,7 @@ body {
         &__title {
             padding-top: 41px;
             color: #FFF;
-            font-family: 'HeliosExtC';
+            font-family: 'HeliosExtC_Bolt';
             text-align: center;
             font-size: clamp(24px, 2.5vw, 35px);
             font-style: normal;
@@ -1757,7 +1760,7 @@ body {
 
             span {
                 color: #FFF;
-                font-family: 'HeliosBlackC';
+                font-family: 'HeliosBlackC_Regular';
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 900;
@@ -1982,5 +1985,116 @@ body {
 
         }
 
+    }
+}
+
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+
+.game {
+    background-image: url(../img/game/background.webp), url(../img/game/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &-content {
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-woman {
+        max-width: 100%;
+        padding-right: 100px;
+    }
+
+    &-man {
+        max-width: 100%;
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../img/game/brush-background.webp), url(../img/game/brush-background.png);
+
+        &__title {
+            color: #FFF;
+            text-align: center;
+            font-family: 'HeliosExtC_Bolt';
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 109%;
+            /* 49.05px */
+            text-transform: uppercase;
+        }
+
+        &__text {
+            padding-top: 27px;
+            color: rgba(255, 255, 255, 0.90);
+            text-align: center;
+            font-family: 'Plus Jakarta Display';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            /* 32px */
+            opacity: 0.7;
+            max-width: 569px;
+        }
+
+        &__button {
+            margin-top: 45px;
+            display: flex;
+            width: 176px;
+            height: 60px;
+            padding: 16px 24px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            border-radius: 6px;
+            background: var(--1, linear-gradient(99deg, #7A42F4 0%, #4642F4 100%), #FFF);
+
+            span {
+                color: #FFF;
+                font-family: 'Plus Jakarta Display';
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 145%;
+                /* 26.1px */
+            }
+        }
+    }
+
+    &-info::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 6px;
+        background-color: #56ffeb;
+        box-shadow: 0 4px 13px rgba(191, 58, 255, 0.44);
+        border-radius: 62px;
+    }
+
+    &-info::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(297deg, rgba(58, 78, 255, 0), rgba(156, 58, 255, 0.14));
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        z-index: -1;
     }
 }
