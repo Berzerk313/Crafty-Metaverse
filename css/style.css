@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @font-face {
-  font-family: "HeliosBlackC_Regular";
+  font-family: "HeliosBlackC";
   src: local("HeliosBlackC"), local("HeliosBlackC"), url("../fonts/HeliosBlackC-Regular.woff") format("woff"), url("../fonts/HeliosBlackC-Regular.woff2") format("woff2"), url("../fonts/HeliosBlackC-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -86,6 +86,14 @@ h1, h2, h3, h4, h5, h6 {
   src: local("Gilroy"), local("Gilroy"), url("../fonts/Gilroy-Regular.eot") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.woff") format("truetype");
   font-weight: 400;
   font-style: normal;
+}
+@font-face {
+  font-family: "HeliosExtC";
+  src: url("../fonts/HeliosExtC-Bold.eot");
+  src: url("../fonts/HeliosExtC-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/HeliosExtC-Bold.woff2") format("woff2"), url("../fonts/HeliosExtC-Bold.woff") format("woff"), url("../fonts/HeliosExtC-Bold.ttf") format("truetype"), url("../fonts/HeliosExtC-Bold.svg#HeliosExtC-Bold") format("svg");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
 }
 a {
   text-decoration: none;
@@ -283,47 +291,43 @@ body {
 }
 .shared-blurs {
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 .shared-blur__first {
   position: absolute;
-  width: 1847px;
-  height: 1172px;
   top: -255px;
   right: 35%;
   max-width: 100%;
   vertical-align: top;
   overflow: clip;
+  z-index: -1;
 }
 .shared-blur__second {
   position: absolute;
-  width: 840px;
-  height: 543px;
   top: -100px;
   left: -207px;
   max-width: 100%;
   vertical-align: top;
   overflow: clip;
+  z-index: -1;
 }
 .shared-blur__third {
   position: absolute;
-  width: 840px;
-  height: 543px;
   top: 620px;
   left: -57px;
   max-width: 100%;
   vertical-align: top;
   overflow: clip;
+  z-index: -1;
 }
 .shared-blur__fourth {
   position: absolute;
-  width: 1249px;
-  height: 888px;
   top: 444px;
-  right: -131px;
+  right: 0px;
   max-width: 100%;
   vertical-align: top;
   overflow: clip;
+  z-index: -1;
 }
 .shared-content {
   padding-top: 325px;
@@ -354,7 +358,7 @@ body {
 }
 .shared-info__subtitle {
   color: #FFF;
-  font-family: "HeliosExtC_Bolt";
+  font-family: "HeliosExtC";
   font-size: clamp(26px, 2.5vw, 48px);
   font-style: normal;
   font-weight: 700;
@@ -387,7 +391,7 @@ body {
 }
 .shared-info__button span {
   color: #FFF;
-  font-family: "HeliosBlackC_Regular";
+  font-family: "HeliosExtC";
   font-size: clamp(16.219px, 2.5vw, 18px);
   font-style: normal;
   font-weight: 900;
@@ -437,6 +441,30 @@ body {
   background-size: cover;
   width: 100%;
   height: 1038px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.about-blurs {
+  position: relative;
+  z-index: 0;
+}
+.about-blur__first {
+  position: absolute;
+  top: 0px;
+  left: 0%;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.about-blur__second {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
 }
 .about-content {
   padding-top: 250px;
@@ -472,7 +500,7 @@ body {
 .about-info__subtitle {
   color: #FFF;
   text-align: left;
-  font-family: "HeliosExtC_Bolt";
+  font-family: "HeliosExtC";
   font-size: clamp(28px, 2.5vw, 45px);
   font-style: normal;
   font-weight: 700;
@@ -528,7 +556,7 @@ body {
 }
 .about__navigation-text {
   color: #FFF;
-  font-family: "HeliosExtC_Bolt";
+  font-family: "HeliosExtC";
   font-size: clamp(16px, 2.5vw, 18px);
   font-style: normal;
   font-weight: 700;
@@ -658,6 +686,109 @@ body {
 }
 .roadmap {
   background: #090812;
+  overflow-x: hidden;
+}
+.roadmap-blurs {
+  position: relative;
+  z-index: 0;
+}
+.roadmap-blur__first {
+  position: absolute;
+  top: 0px;
+  left: 0%;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.roadmap-blur__second {
+  position: absolute;
+  top: 600px;
+  right: 0;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.roadmap-blur__third {
+  position: absolute;
+  top: 250px;
+  left: 30%;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.roadmap-blur__fourth {
+  position: absolute;
+  top: 750px;
+  right: 32%;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.roadmap-blur__fiveth {
+  position: absolute;
+  top: 1200px;
+  left: 30%;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.roadmap-blur__sixth {
+  position: absolute;
+  top: 1700px;
+  right: 32%;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+@media (max-width: 768px) {
+  .roadmap-blur__third {
+    top: 250px;
+    left: 60%;
+    width: 250px;
+    height: 250px;
+  }
+  .roadmap-blur__fourth {
+    top: 780px;
+    right: 65%;
+    width: 250px;
+    height: 250px;
+  }
+  .roadmap-blur__fiveth {
+    top: 1320px;
+    left: 60%;
+    width: 250px;
+    height: 250px;
+  }
+  .roadmap-blur__sixth {
+    top: 1780px;
+    right: 60%;
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (max-width: 390px) {
+  .roadmap-blur__third {
+    top: 150px;
+    left: 40%;
+  }
+  .roadmap-blur__fourth {
+    top: 650px;
+    right: 40%;
+  }
+  .roadmap-blur__fiveth {
+    top: 1120px;
+    left: 40%;
+  }
+  .roadmap-blur__sixth {
+    top: 1580px;
+    right: 40%;
+  }
 }
 .roadmap__title {
   padding-top: 215px;
@@ -675,7 +806,7 @@ body {
   padding-top: 16px;
   color: #FFF;
   text-align: center;
-  font-family: "HeliosExtC_Bolt";
+  font-family: "HeliosExtC";
   font-size: clamp(28px, 2.5vw, 45px);
   font-style: normal;
   font-weight: 700;
@@ -800,7 +931,7 @@ body {
 }
 .roadmap-item-info-nav__text {
   color: #FFF;
-  font-family: "HeliosExtC_Bolt";
+  font-family: "HeliosExtC";
   font-size: clamp(16px, 2.5vw, 18px);
   font-style: normal;
   font-weight: 700;
@@ -1088,6 +1219,83 @@ body {
   width: 100%;
   height: auto;
   background-image: url(../img/brands/brush-background.webp), url(../img/brands/brush-background.png);
+  overflow-x: hidden;
+}
+.brands-blurs {
+  position: relative;
+  z-index: -1;
+}
+.brands-blur__first {
+  position: absolute;
+  top: 170px;
+  left: 10%;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.brands-blur__second {
+  position: absolute;
+  top: 150px;
+  left: 25%;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.brands-blur__third {
+  position: absolute;
+  top: 150px;
+  right: 25%;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.brands-blur__fourth {
+  position: absolute;
+  top: 150px;
+  right: 10%;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+@media (max-width: 1224px) {
+  .brands-blur__first {
+    top: 170px;
+    left: 5%;
+  }
+  .brands-blur__second {
+    top: 150px;
+    left: 35%;
+  }
+  .brands-blur__third {
+    top: 150px;
+    right: -10%;
+  }
+  .brands-blur__fourth {
+    top: 950px;
+    right: 20%;
+  }
+}
+@media (max-width: 824px) {
+  .brands-blur__first {
+    top: 100px;
+    left: 7%;
+  }
+  .brands-blur__second {
+    top: 950px;
+    left: 5%;
+  }
+  .brands-blur__third {
+    top: 950px;
+    right: -10%;
+  }
+  .brands-blur__fourth {
+    top: 1850px;
+    right: 10%;
+  }
 }
 .brands__title {
   padding-top: 96px;
@@ -1162,7 +1370,7 @@ body {
   padding-top: 110px;
   color: #FFF;
   text-align: center;
-  font-family: "HeliosExtC_Bolt";
+  font-family: "HeliosExtC";
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -1270,6 +1478,59 @@ body {
 }
 .resources {
   background: #090812;
+  overflow-x: hidden;
+}
+.resources-blurs {
+  position: relative;
+  z-index: 0;
+}
+.resources-blur__first {
+  position: absolute;
+  top: 170px;
+  left: 0px;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.resources-blur__second {
+  position: absolute;
+  top: 230px;
+  right: 17%;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -2;
+}
+@media (max-width: 1600px) {
+  .resources-blur__second {
+    top: 230px;
+    right: 0%;
+  }
+}
+@media (max-width: 1300px) {
+  .resources-blur__first {
+    top: 400px;
+    left: 0px;
+    rotate: 275deg;
+  }
+  .resources-blur__second {
+    top: 230px;
+    right: 20%;
+  }
+}
+@media (max-width: 390px) {
+  .resources-blur__first {
+    top: 400px;
+    width: 2500px;
+    left: 0px;
+    rotate: 270deg;
+  }
+  .resources-blur__second {
+    top: 100px;
+    right: 0%;
+    height: 500px;
+  }
 }
 .resources__title {
   padding-top: 88px;
@@ -1287,7 +1548,7 @@ body {
   padding-top: 18px;
   color: #FFF;
   text-align: center;
-  font-family: "HeliosExtC_Bolt";
+  font-family: "HeliosExtC";
   font-size: clamp(28px, 2.5vw, 45px);
   font-style: normal;
   font-weight: 700;
@@ -1347,7 +1608,7 @@ body {
 .resources-left__title {
   padding-top: 41px;
   color: #FFF;
-  font-family: "HeliosExtC_Bolt";
+  font-family: "HeliosExtC";
   text-align: center;
   font-size: clamp(24px, 2.5vw, 35px);
   font-style: normal;
@@ -1386,8 +1647,8 @@ body {
 }
 .resources-left__button span {
   color: #FFF;
-  font-family: "HeliosBlackC_Regular";
-  font-size: 18px;
+  font-family: "HeliosExtC";
+  font-size: 17px;
   font-style: normal;
   font-weight: 900;
   line-height: 145%;
@@ -1601,7 +1862,7 @@ body {
 .game-info__title {
   color: #FFF;
   text-align: center;
-  font-family: "HeliosExtC_Bolt";
+  font-family: "HeliosExtC";
   font-size: 45px;
   font-style: normal;
   font-weight: 700;

@@ -1,7 +1,7 @@
 @import "./nullstyle.scss";
 
 @font-face {
-    font-family: 'HeliosBlackC_Regular';
+    font-family: 'HeliosBlackC';
     src: local('HeliosBlackC'), local('HeliosBlackC'),
         // url('../fonts/HeliosBlackC_Regular.otf') format("opentype");
         // url('../fonts/HeliosBlackC.eot') format('embedded-opentype'),
@@ -47,6 +47,15 @@
         url('../fonts/Gilroy-Regular.woff') format('truetype');
     font-weight: 400;
     font-style: normal;
+}
+
+@font-face {
+    font-family: "HeliosExtC";
+    src: url("../fonts/HeliosExtC-Bold.eot");
+    src: url("../fonts/HeliosExtC-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/HeliosExtC-Bold.woff2") format("woff2"), url("../fonts/HeliosExtC-Bold.woff") format("woff"), url("../fonts/HeliosExtC-Bold.ttf") format("truetype"), url("../fonts/HeliosExtC-Bold.svg#HeliosExtC-Bold") format("svg");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
 }
 
 //////////////////////////////
@@ -291,12 +300,13 @@ body {
 ////////////////////////////////
 ////////////////////////////////
 
-.shared {
+.shared {   
     background-image: url(../img/shared/background.webp), url(../img/shared/background.png);
     background-size: cover;
     width: 100%;
     height: 1010px;
     z-index: -3;
+    // position: relative;
 
     @media (max-width: 700px) {
         background-image: url(../img/shared/mobile/background-mobile.webp), url(../img/shared/mobile/background-mobile.png);
@@ -308,94 +318,50 @@ body {
 
     &-blurs {
         position: relative;
-        z-index: 1;
+        z-index: 0;
         // overflow: hidden;
     }
 
     &-blur__first {
-        position: absolute;
-        width: 1847px;
-        height: 1172px;
+        position: absolute;   
         top: -255px;
         right: 35%;
         max-width: 100%;
         vertical-align: top;
         overflow: clip;
-        // width: 859.184px;
-        // height: 372.671px;
-        // transform: rotate(34.59deg);
-        // border-radius: 859.184px;
-        // opacity: 0.5;
-        // background: var(--1, linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%));
-        // filter: blur(218px);
-        // position: absolute;
-        // top: 155px;
-        // left: 180px;
-        // z-index: -1;
+        z-index: -1;
     }
 
     &-blur__second {
         position: absolute;
-        width: 840px;
-        height: 543px;
         top: -100px;
         left: -207px;
         max-width: 100%;
         vertical-align: top;
         overflow: clip;
-        // width: 147px;
-        // height: 147px;
-        // border-radius: 1000px;
-        // background: #7A59FF;
-        // filter: blur(149.5px);
-        // position: absolute;
-        // top: 80px;
-        // left: 50px;
-        // z-index: -1;
+        z-index: -1;
     }
 
     &-blur__third {
         position: absolute;
-        width: 840px;
-        height: 543px;
         top: 620px;
         left: -57px;
         max-width: 100%;
         vertical-align: top;
         overflow: clip;
-        // width: 378px;
-        // height: 378px;
-        // border-radius: 1000px;
-        // background: #25044E;
-        // filter: blur(100px);
-        // position: absolute;
-        // top: 700px;
-        // // bottom: 0px;
-        // left: 50px;
-        // z-index: -1;
+        z-index: -1;
     }
 
     &-blur__fourth {
-        // width: 859.184px;
-        // height: 372.671px;
-        // transform: rotate(166.457deg);
-        // border-radius: 859.184px;
-        // opacity: 0.2;
-        // background: #A109FE;
-        // filter: blur(218px);
-        // position: absolute;
-        // top: 700px;
-        // // bottom: 0px;
-        // right: -100px;
-        // z-index: -1;
         position: absolute;
-        width: 1249px;
-        height: 888px;
+        // width: 1249px;
+        // height: 888px;
         top: 444px;
-        right: -131px;
+        right: 0px;
         max-width: 100%;
         vertical-align: top;
         overflow: clip;
+        z-index: -1;
     }
 
     /////////////////
@@ -432,7 +398,7 @@ body {
 
         &__subtitle {
             color: #FFF;
-            font-family: 'HeliosExtC_Bolt';
+            font-family: 'HeliosExtC';
             font-size: clamp(26px, 2.5vw, 48px);
             font-style: normal;
             font-weight: 700;
@@ -468,7 +434,7 @@ body {
 
             span {
                 color: #FFF;
-                font-family: 'HeliosBlackC_Regular';
+                font-family: 'HeliosExtC';
                 font-size: clamp(16.219px, 2.5vw, 18px);
                 font-style: normal;
                 font-weight: 900;
@@ -539,6 +505,34 @@ body {
     background-size: cover;
     width: 100%;
     height: 1038px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    &-blurs {
+        position: relative;
+        z-index: 0;
+        // overflow: hidden;
+    }
+
+    &-blur__first {
+        position: absolute;   
+        top: 0px;
+        left: 0%;
+        max-width: 100%;
+        vertical-align: top;
+        overflow: clip;
+        z-index: -1;
+    }
+
+    &-blur__second {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        max-width: 100%;
+        vertical-align: top;
+        overflow: clip;
+        z-index: -1;
+    }
 
     &-content {
         padding-top: 250px;
@@ -580,7 +574,7 @@ body {
         &__subtitle {
             color: #FFF;
             text-align: left;
-            font-family: 'HeliosExtC_Bolt';
+            font-family: 'HeliosExtC';
             font-size: clamp(28px, 2.5vw, 45px);
             font-style: normal;
             font-weight: 700;
@@ -649,7 +643,7 @@ body {
 
         &-text {
             color: #FFF;
-            font-family: 'HeliosExtC_Bolt';
+            font-family: 'HeliosExtC';
             font-size: clamp(16px, 2.5vw, 18px);
             font-style: normal;
             font-weight: 700;
@@ -842,6 +836,115 @@ body {
 
 .roadmap {
     background: #090812;
+    overflow-x: hidden;
+
+    &-blurs {
+        position: relative;
+        z-index: 0;
+        // overflow: hidden;
+    }
+
+    &-blur__first {
+        position: absolute;   
+        top: 0px;
+        left: 0%;
+        max-width: 100%;
+        vertical-align: top;
+        overflow: clip;
+        z-index: -1;
+    }
+
+    &-blur__second {
+        position: absolute;
+        top: 600px;
+        right: 0;
+        max-width: 100%;
+        vertical-align: top;
+        overflow: clip;
+        z-index: -1;
+    }
+    &-blur__third {
+        position: absolute;
+        top: 250px;
+        left: 30%;
+        max-width: 100%;
+        vertical-align: top;
+        overflow: clip;
+        z-index: -1;
+    }
+    &-blur__fourth {
+        position: absolute;
+        top: 750px;
+        right: 32%;
+        max-width: 100%;
+        vertical-align: top;
+        overflow: clip;
+        z-index: -1;
+    }
+    &-blur__fiveth {
+        position: absolute;
+        top: 1200px;
+        left: 30%;
+        max-width: 100%;
+        vertical-align: top;
+        overflow: clip;
+        z-index: -1;
+    }
+    &-blur__sixth {
+        position: absolute;
+        top: 1700px;
+        right: 32%;
+        max-width: 100%;   
+        vertical-align: top;
+        overflow: clip;
+        z-index: -1;
+    }
+
+    @media (max-width: 768px) {
+        &-blur__third {
+            top: 250px;
+            left: 60%;
+            width: 250px;
+            height: 250px;
+        }
+        &-blur__fourth {
+            top: 780px;
+            right: 65%;
+            width: 250px;
+            height: 250px;
+        }
+        &-blur__fiveth {
+            top: 1320px;
+            left: 60%;
+            width: 250px;
+            height: 250px;
+        }
+        &-blur__sixth {
+            top: 1780px;
+            right: 60%;
+            width: 250px;
+            height: 250px;
+        }
+    }
+    
+    @media (max-width: 390px) {
+        &-blur__third {
+            top: 150px;
+            left: 40%;
+        }
+        &-blur__fourth {
+            top: 650px;
+            right: 40%;
+        }
+        &-blur__fiveth {
+            top: 1120px;
+            left: 40%;
+        }
+        &-blur__sixth {
+            top: 1580px;
+            right: 40%;
+        }
+    }
 
     &__title {
         padding-top: 215px;
@@ -860,7 +963,7 @@ body {
         padding-top: 16px;
         color: #FFF;
         text-align: center;
-        font-family: 'HeliosExtC_Bolt';
+        font-family: 'HeliosExtC';
         font-size: clamp(28px, 2.5vw, 45px);
         font-style: normal;
         font-weight: 700;
@@ -1015,7 +1118,7 @@ body {
 
             &__text {
                 color: #FFF;
-                font-family: 'HeliosExtC_Bolt';
+                font-family: 'HeliosExtC';
                 font-size: clamp(16px, 2.5vw, 18px);
                 font-style: normal;
                 font-weight: 700;
@@ -1384,8 +1487,92 @@ body {
     width: 100%;
     height: auto;
     background-image: url(../img/brands/brush-background.webp), url(../img/brands/brush-background.png);
-
+    overflow-x: hidden;
     // transform: rotate(90deg);
+
+    &-blurs {
+        position: relative;
+        z-index: -1;
+        // overflow: hidden;
+    }
+
+    &-blur__first {
+        position: absolute;   
+        top: 170px;
+        left: 10%;
+        max-width: 100%;
+        vertical-align: top;
+        overflow: clip;
+        z-index: -1;
+    }
+
+    &-blur__second {
+        position: absolute;
+        top: 150px;
+        left: 25%;
+        max-width: 100%;
+        vertical-align: top;
+        overflow: clip;
+        z-index: -1;
+    }
+    &-blur__third {
+        position: absolute;
+        top: 150px;
+        right: 25%;
+        max-width: 100%;
+        vertical-align: top;
+        overflow: clip;
+        z-index: -1;
+    }
+    &-blur__fourth {
+        position: absolute;
+        top: 150px;
+        right: 10%;
+        max-width: 100%;
+        vertical-align: top;
+        overflow: clip;
+        z-index: -1;
+    }
+
+    @media (max-width: 1224px) {
+        &-blur__first {  
+            top: 170px;
+            left: 5%;
+        }
+    
+        &-blur__second {
+            top: 150px;
+            left: 35%;
+        }
+        &-blur__third {
+            top: 150px;
+            right: -10%;
+        }
+        &-blur__fourth {
+            top: 950px;
+            right: 20%;
+        }
+    }
+
+    @media (max-width: 824px) {
+        &-blur__first {  
+            top: 100px;
+            left: 7%;
+        }
+    
+        &-blur__second {
+            top: 950px;
+            left: 5%;
+        }
+        &-blur__third {
+            top: 950px;
+            right: -10%;
+        }
+        &-blur__fourth {
+            top: 1850px;
+            right: 10%;
+        }
+    }
 
     &__title {
         padding-top: 96px;
@@ -1471,7 +1658,7 @@ body {
             padding-top: 110px;
             color: #FFF;
             text-align: center;
-            font-family: 'HeliosExtC_Bolt';
+            font-family: 'HeliosExtC';
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
@@ -1627,6 +1814,66 @@ body {
 
 .resources {
     background: #090812;
+    overflow-x: hidden;
+
+    &-blurs {
+        position: relative;
+        z-index: 0;
+        // overflow: hidden;
+    }
+
+    &-blur__first {
+        position: absolute;   
+        top: 170px;
+        left: 0px;
+        max-width: 100%;
+        vertical-align: top;
+        overflow: clip;
+        z-index: -1;
+    }
+
+    &-blur__second {
+        position: absolute;
+        top: 230px;
+        right: 17%;
+        max-width: 100%;
+        vertical-align: top;
+        overflow: clip;
+        z-index: -2;
+    }
+
+    @media (max-width: 1600px) {
+        &-blur__second {
+            top: 230px;
+            right: 0%;
+        }
+    }
+
+    @media (max-width: 1300px) {
+        &-blur__first { 
+            top: 400px;
+            left: 0px;
+            rotate: 275deg;
+        }
+        &-blur__second {
+            top: 230px;
+            right: 20%;
+        }
+    }
+
+    @media (max-width: 390px) {
+        &-blur__first { 
+            top: 400px;
+            width: 2500px;
+            left: 0px;
+            rotate: 270deg;
+        }
+        &-blur__second {
+            top: 100px;
+            right: 0%;
+            height: 500px;
+        }
+    }
 
     &__title {
         padding-top: 88px;
@@ -1645,7 +1892,7 @@ body {
         padding-top: 18px;
         color: #FFF;
         text-align: center;
-        font-family: 'HeliosExtC_Bolt';
+        font-family: 'HeliosExtC';
         font-size: clamp(28px, 2.5vw, 45px);
         font-style: normal;
         font-weight: 700;
@@ -1718,7 +1965,7 @@ body {
         &__title {
             padding-top: 41px;
             color: #FFF;
-            font-family: 'HeliosExtC_Bolt';
+            font-family: 'HeliosExtC';
             text-align: center;
             font-size: clamp(24px, 2.5vw, 35px);
             font-style: normal;
@@ -1760,8 +2007,8 @@ body {
 
             span {
                 color: #FFF;
-                font-family: 'HeliosBlackC_Regular';
-                font-size: 18px;
+                font-family: 'HeliosExtC';
+                font-size: 17px;
                 font-style: normal;
                 font-weight: 900;
                 line-height: 145%;
@@ -2024,7 +2271,7 @@ body {
         &__title {
             color: #FFF;
             text-align: center;
-            font-family: 'HeliosExtC_Bolt';
+            font-family: 'HeliosExtC';
             font-size: 45px;
             font-style: normal;
             font-weight: 700;
