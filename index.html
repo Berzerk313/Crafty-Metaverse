@@ -62,16 +62,7 @@
         <section id="shared" class="shared">
 
             <div class="shared-blurs">
-                <img class="shared-blur__first" src="./img/shared/blur/left-top.png" width="1847px" height="1172px"
-                    alt="blur">
-                <img class="shared-blur__second" src="./img/shared/blur/left-top-big.png" width="840px" height="543px"
-                    alt="blur">
-                <img class="shared-blur__third" src="./img/shared/blur/left-bottom.png" width="840px" height="543px"
-                    alt="blur">
-                <img class="shared-blur__fourth" src="./img/shared/blur/right-bottom-big.png" width="1249px"
-                    height="888px" alt="blur">
-
-                <!-- <picture>
+                <picture>
                     <source srcset="./img/shared/blur/left-top.webp" type="webp">
                     <img class="shared-blur__first" src="./img/shared/blur/left-top.png" width="1847px" height="1172px"
                     alt="blur">
@@ -90,7 +81,7 @@
                     <source srcset="./img/shared/blur/right-bottom-big.webp" type="webp">
                     <img class="shared-blur__fourth" src="./img/shared/blur/right-bottom-big.png" width="1249px"
                     height="888px" alt="blur">
-                </picture> -->
+                </picture>
             </div>
 
             <div class="container">
@@ -511,20 +502,39 @@
             </div>
         </section>
 
-        <!-- <section id="game" class="game">
+        <section id="game" class="game">
+
+            <div class="game-outer-big">
+                <div>
+                    <h2 class="game-outer-big__text">VR GAME MARKETPLACE VR GAME MARKETPLACE VR GAME MARKETPLACE</h2>
+                  </div>
+            </div>
+            
+            <div class="game-outer-small">
+                <div>
+                    <h2 class="game-outer-small__text"><span></span> CRAFTY METAVERSE <span></span> CRAFTY METAVERSE <span></span> CRAFTY METAVERSE</h2>
+                  </div>
+            </div>
+
             <div class="container">
                 <div class="game-content">
-                    <picture>
-                        <source srcset="./img/game/woman.webp" type="webp" />
-                        <img src="./img/game/woman.png" alt="woman" class="game-woman">
+                    <picture class="game__woman">
+                        <source srcset="./img/game/woman.webp" type="webp"/>
+                        <source srcset="./img/game/mobile/woman-mobile.webp" media="(max-width: 640px)"/>
+                        <source srcset="./img/game/mobile/woman-mobile.png" media="(max-width: 640px)"/>
+                        <img src="./img/game/woman.png" alt="woman" class="game__woman">
                     </picture>
                     <div class="game-info">
+                        <picture>
+                            <source src="./img/game/brush-background.webp"/>
+                            <img src="./img/game/brush-background.png" alt="" class="game-info__bg">
+                        </picture>
                         <h2 class="game-info__title">Game</h2>
                         <p class="game-info__text">
                             The space will also offer avid gamers to be a part of an
                             amazing 3D gaming experience (details to be published soon).
                         </p>
-                        <p class="game-info__text">
+                        <p class="game-info__text game-info__text_padding">
                             Crafty Metaverse space will continuously evolve its 3D gaming space to
                             include technologies such as VR headsets, augmented reality glasses, and
                             game consoles.
@@ -532,14 +542,21 @@
                         <button class="game-info__button">
                             <span>Invest Now</span>
                         </button>
+                        <img src="./img/game/plain.svg" alt="star" class="game-info__star">
                     </div>
-                    <picture>
+                    <picture class="game__man">
                         <source srcset="./img/game/man.webp" type="webp" />
-                        <img src="./img/game/man.png" alt="woman" class="game-man">
+                        <source srcset="./img/game/mobile/man-mobile.webp" media="(max-width: 640px)"/>
+                        <source srcset="./img/game/mobile/man-mobile.png" media="(max-width: 640px)"/>
+                        <img src="./img/game/man.png" alt="man" class="game__man">
+                    </picture>
+                    <picture class="game__circle">
+                        <source src="./img/game/circle.webp"/>
+                        <img src="./img/game/circle.png" alt="" class="game__circle">
                     </picture>
                 </div>
             </div>
-        </section> -->
+        </section>
 
         <section id="explore"></section>
         <section id="team"></section>

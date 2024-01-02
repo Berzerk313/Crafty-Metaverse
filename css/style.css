@@ -993,6 +993,9 @@ body {
     transform: translateY(0px);
   }
 }
+.roadmap-wrapper {
+  position: relative;
+}
 .roadmap-item-circle {
   position: relative;
 }
@@ -1838,32 +1841,126 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: 1;
+  overflow: hidden;
 }
-.game-content {
-  padding-top: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.game-outer-big {
+  border: 2px solid rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  border-top: rgba(255, 255, 255, 0.2) 1px solid;
+  border-bottom: rgba(255, 255, 255, 0.2) 1px solid;
+  overflow: hidden;
+  text-wrap: nowrap;
+  width: 100%;
+  max-height: 288.872px;
+  z-index: 5;
+  position: absolute;
+  left: -7px;
+  transform: rotate(-9.09deg) translateY(-40px);
 }
-.game-woman {
-  max-width: 100%;
-  padding-right: 100px;
+.game-outer-big div {
+  animation: running-text-first 10s linear infinite;
+  width: 100%;
 }
-.game-man {
-  max-width: 100%;
-}
-.game-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/game/brush-background.webp), url(../img/game/brush-background.png);
-}
-.game-info__title {
+.game-outer-big__text {
   color: #FFF;
   text-align: center;
   font-family: "HeliosExtC";
-  font-size: 45px;
+  font-size: clamp(52px, 2.5vw, 200px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  /* 280px */
+  letter-spacing: 2px;
+}
+.game-outer-small {
+  background: #000;
+  overflow: hidden;
+  text-wrap: nowrap;
+  width: 100%;
+  max-height: 103px;
+  z-index: 5;
+  position: absolute;
+  left: 0;
+  transform: rotate(-9.09deg) translateY(50px) translateX(-50px);
+}
+.game-outer-small div {
+  animation: running-text-first 10s linear infinite;
+  width: 100%;
+}
+.game-outer-small__text {
+  text-align: right;
+  font-family: "HeliosExtC";
+  font-size: clamp(19px, 2.5vw, 72px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  /* 100.8px */
+  letter-spacing: 0.72px;
+  background: var(--2, linear-gradient(90deg, #21FCFF 0%, #FD40FF 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 100%;
+}
+.game-outer-small__text span {
+  display: inline-block;
+  background-image: url(../img/game/plain-for-outer.svg);
+  width: 46px;
+  height: 46px;
+  transform: rotate(11.44deg);
+}
+@keyframes running-text-first {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.game-content {
+  padding-top: 528px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+.game__circle {
+  display: none;
+}
+.game__woman {
+  max-width: 100%;
+  padding-top: 45px;
+  padding-left: 15px;
+}
+.game__man {
+  max-width: 100%;
+}
+.game-info {
+  margin-left: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 664px;
+  height: 600px;
+  z-index: 1;
+}
+.game-info__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 600px;
+}
+.game-info__title {
+  padding-top: 75px;
+  color: #FFF;
+  text-align: center;
+  font-family: "HeliosExtC";
+  font-size: clamp(28px, 2.5vw, 45px);
   font-style: normal;
   font-weight: 700;
   line-height: 109%;
@@ -1871,17 +1968,20 @@ body {
   text-transform: uppercase;
 }
 .game-info__text {
-  padding-top: 27px;
   color: rgba(255, 255, 255, 0.9);
   text-align: center;
   font-family: "Plus Jakarta Display";
-  font-size: 20px;
+  font-size: clamp(16px, 2.5vw, 20px);
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
   /* 32px */
   opacity: 0.7;
   max-width: 569px;
+  padding: 27px 20px 0 20px;
+}
+.game-info__text_padding {
+  padding-top: 35px;
 }
 .game-info__button {
   margin-top: 45px;
@@ -1895,6 +1995,7 @@ body {
   border: none;
   border-radius: 6px;
   background: var(--1, linear-gradient(99deg, #7A42F4 0%, #4642F4 100%), #FFF);
+  transition: all 0.5s ease-out;
 }
 .game-info__button span {
   color: #FFF;
@@ -1904,6 +2005,63 @@ body {
   font-weight: 700;
   line-height: 145%;
   /* 26.1px */
+}
+.game-info__star {
+  position: absolute;
+  top: 12%;
+  right: -3%;
+}
+.game-info__button:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-out;
+}
+@media (max-width: 1300px) {
+  .game-content {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    justify-content: center;
+    align-items: center;
+  }
+  .game-info {
+    width: 100%;
+    margin-left: 0;
+    grid-row: 1;
+    grid-column: span 2;
+  }
+  .game-info__bg {
+    width: 100%;
+  }
+  .game-info__star {
+    display: none;
+  }
+  .game__woman {
+    padding: 0;
+    position: relative;
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .game__man {
+    position: relative;
+    grid-row: span 2;
+    grid-column: 1;
+  }
+  .game__circle {
+    display: flex;
+    justify-content: center;
+    grid-row: 3;
+    grid-column: 2;
+    align-items: end;
+    max-width: 100%;
+  }
+}
+@media (max-width: 510px) {
+  .game__woman {
+    transform: translateX(-5%);
+  }
+  .game__circle {
+    transform: translateX(-5%);
+  }
 }
 .game-info::after {
   content: "";
