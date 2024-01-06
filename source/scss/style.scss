@@ -88,10 +88,6 @@ main {
     overflow: hidden;
 }
 
-////////////////////////////////
-////////////////////////////////
-////////////////////////////////
-
 .header_background {
     background: rgba(0, 0, 0, 0.75);
     position: fixed;
@@ -293,10 +289,6 @@ main {
     }
 }
 
-////////////////////////////////
-////////////////////////////////
-////////////////////////////////
-
 .shared {
     background-image: url(../img/shared/background.webp), url(../img/shared/background.png);
     background-size: cover;
@@ -487,10 +479,6 @@ main {
         }
     }
 }
-
-////////////////////////////////
-////////////////////////////////
-////////////////////////////////
 
 .about {
     background-image: url(../img/about/background.webp), url(../img/about/background.png);
@@ -808,15 +796,14 @@ main {
     }
 }
 
-
-
-//////////////////////////////
-//////////////////////////////
-//////////////////////////////
-
 .roadmap {
     background: #090812;
     overflow-x: hidden;
+
+    // .wrapper {
+    //     position: relative;
+    //     z-index: 0;
+    // }
 
     &-blurs {
         position: relative;
@@ -1464,10 +1451,6 @@ main {
     }
 }
 
-//////////////////////////////
-//////////////////////////////
-//////////////////////////////
-
 .brands {
     background: linear-gradient(180deg, rgba(36, 10, 92, 0.63) 8.97%, rgba(36, 11, 88, 0.30) 100%);
     backdrop-filter: blur(150px);
@@ -1801,10 +1784,6 @@ main {
         }
     }
 }
-
-//////////////////////////////
-//////////////////////////////
-//////////////////////////////
 
 .resources {
     background: #090812;
@@ -2230,10 +2209,6 @@ main {
 
     }
 }
-
-//////////////////////////////
-//////////////////////////////
-//////////////////////////////
 
 .game {
     background-image: url(../img/game/background.webp), url(../img/game/background.png);
@@ -2664,10 +2639,6 @@ main {
     }
 }
 
-//////////////////////////////
-//////////////////////////////
-//////////////////////////////
-
 .explore {
     background: #090812;
     overflow-x: hidden;
@@ -2678,28 +2649,32 @@ main {
     &-blurs {
         position: relative;
         z-index: 0;
-        // overflow: hidden;
-    }
 
-    &-blur__first {
-        position: absolute;
-        top: 400px;
-        left: 0px;
-        max-width: 100%;
-        overflow: clip;
-        z-index: -1;
+        // overflow: hidden;
+        &__first {
+            position: absolute;
+            top: 400px;
+            left: 0px;
+            max-width: 100%;
+            overflow: clip;
+            z-index: -1;
+
+            // @media (max-width: 1920px) {
+            //     left: -100px;
+            // }
+        }
     }
 
     @media (max-width: 1000px) {
         &-blur__first {
             top: 100px;
-        } 
+        }
     }
 
     @media (max-width: 768px) {
         &-blur__first {
             top: 0px;
-        } 
+        }
     }
 
     // &__img {
@@ -2958,7 +2933,7 @@ main {
 
     &-bottom {
         margin-top: 220px;
-        margin-bottom: 300px;
+        margin-bottom: 140px;
         display: flex;
         justify-content: end;
         align-items: center;
@@ -3211,4 +3186,198 @@ main {
     }
 
 
+}
+
+.team {
+    background: #0A0117;
+    background-image: url(../img/team/bg.webp), url(../img/team/bg.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    &-blurs {
+        position: relative;
+        z-index: 0;
+
+        &__first {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            max-width: 100%;
+            vertical-align: top;
+            overflow: clip;
+            z-index: -1;
+        }
+
+        &__second {
+            position: absolute;
+            top: 170px;
+            left: 0px;
+            max-width: 100%;
+            vertical-align: top;
+            overflow: clip;
+            z-index: -1;
+        }
+
+        &__third {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            max-width: 100%;
+            vertical-align: top;
+            overflow: clip;
+            z-index: -1;
+        }
+    }
+
+    &__title {
+        color: #FFF;
+        text-align: center;
+        font-family: 'Gilroy';
+        font-size: clamp(16px, 2.5vw, 20px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        /* 28px */
+        text-transform: uppercase;
+        z-index: 2;
+    }
+
+    &__subtitle {
+        color: #FFF;
+        text-align: center;
+        font-family: 'HeliosExtC';
+        font-size: clamp(28px, 2.5vw, 45px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 109%;
+        /* 49.05px */
+        text-transform: uppercase;
+        z-index: 2;
+    }
+
+    &-group {
+        display: flex;
+        z-index: 1;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            z-index: 2;
+
+            &-man {
+                max-width: 100%;
+            }
+
+            &-social {
+                display: flex;
+                gap: 14px;
+
+                &-item {}
+            }
+
+            &-post {
+                color: #FFF;
+                font-family: 'Plus Jakarta Display';
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 22.4px */
+            }
+
+            &-name {
+                text-align: center;
+                font-family: 'HeliosExtC';
+                font-size: 45px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+                /* 63px */
+                text-transform: uppercase;
+            }
+        }
+
+        // &__item:nth-child(1) &__item-name {
+        //         color: #56FFEB;
+        // }
+        &__item:nth-child(1) {
+            // .team-group__item-name {
+            //     color: #56FFEB;
+            // }
+        }
+    }
+
+    .item_first {
+
+        &-man {}
+
+        &-social {
+
+            &-item {}
+        }
+
+        &-post {}
+
+        .team-group__item-name {
+            color: #56FFEB;
+        }
+    }
+
+    .item-second {
+
+        &-man {}
+
+        &-social {
+
+            &-item {}
+        }
+
+        &-post {
+            opacity: 0.7;
+        }
+
+        &-name {
+            color: #2C4DFF;
+        }
+    }
+
+    .item-third {
+
+        &-man {}
+
+        &-social {
+
+            &-item {}
+        }
+
+        &-post {
+            opacity: 0.7;
+        }
+
+        &-name {
+            
+        }
+
+        .name_color {
+            color: #BF3AFF;
+        }
+    }
+
+    .item-fourth {
+
+        &-man {}
+
+        &-social {
+
+            &-item {}
+        }
+
+        &-post {
+            opacity: 0.7;
+        }
+
+        &-name {
+            color: #FB41FF;
+        }
+    }
 }
