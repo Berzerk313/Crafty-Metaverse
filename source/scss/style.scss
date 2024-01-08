@@ -2641,7 +2641,7 @@ main {
 
 .explore {
     background: #090812;
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -3230,6 +3230,7 @@ main {
     }
 
     &__title {
+        padding-top: 144px;
         color: #FFF;
         text-align: center;
         font-family: 'Gilroy';
@@ -3243,6 +3244,7 @@ main {
     }
 
     &__subtitle {
+        padding-top: 21px;
         color: #FFF;
         text-align: center;
         font-family: 'HeliosExtC';
@@ -3257,7 +3259,15 @@ main {
 
     &-group {
         display: flex;
+        justify-content: space-between;
         z-index: 1;
+        gap: 20px;
+        padding: 69px 65px;
+        padding-bottom: 200px;
+        @media (max-width: 1440px) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
 
         &__item {
             display: flex;
@@ -3269,16 +3279,21 @@ main {
             }
 
             &-social {
+                padding-top: 10px;
                 display: flex;
+                justify-content: center;
+                align-items: center;
                 gap: 14px;
 
                 &-item {}
             }
 
             &-post {
+                padding-top: 18px;
                 color: #FFF;
                 font-family: 'Plus Jakarta Display';
                 font-size: 16px;
+                text-align: center;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 140%;
@@ -3286,6 +3301,7 @@ main {
             }
 
             &-name {
+                padding-top: 1px;
                 text-align: center;
                 font-family: 'HeliosExtC';
                 font-size: 45px;
@@ -3296,88 +3312,169 @@ main {
                 text-transform: uppercase;
             }
         }
-
-        // &__item:nth-child(1) &__item-name {
-        //         color: #56FFEB;
-        // }
-        &__item:nth-child(1) {
-            // .team-group__item-name {
-            //     color: #56FFEB;
-            // }
-        }
     }
 
     .item_first {
+        transform: translateY(140px);
+        transition: all 0.5s ease-out;
 
-        &-man {}
+        .team-group__item-man {}
 
-        &-social {
-
-            &-item {}
+        .team-group__item-social {
+            opacity: 0;
+            transition: all 0.5s ease-out;
         }
-
-        &-post {}
 
         .team-group__item-name {
             color: #56FFEB;
         }
+
     }
 
-    .item-second {
+    .item_second {
+        transform: translateY(0);
+        transition: all 0.5s ease-out;
 
-        &-man {}
+        .team-group__item-man {}
 
-        &-social {
+        .team-group__item-social {
+            opacity: 0;
+            transition: all 0.5s ease-out;
+            padding-bottom: 10px;
 
             &-item {}
         }
 
-        &-post {
+        .team-group__item-post {
             opacity: 0.7;
         }
 
-        &-name {
+        .team-group__item-name {
             color: #2C4DFF;
         }
+
+        @media (max-width: 1440px) {
+            transform: translateY(170px);
+            .team-group__item-man {
+                order: 1;
+            }
+            .team-group__item-social {
+                padding-top: 30px;
+                padding-bottom: 0px;
+                order: 2;
+            }
+            .team-group__item-post {
+                order: 3;
+            }
+    
+            .team-group__item-name {
+                order: 4;
+            }
+        }
     }
 
-    .item-third {
+    .item_third {
+        transform: translateY(170px);
+        transition: all 0.5s ease-out;
 
-        &-man {}
-
-        &-social {
-
-            &-item {}
+        .team-group__item-social {
+            opacity: 0;
+            transition: all 0.5s ease-out;
+            @media (max-width: 1440px) {
+                padding: 30px 0 0px 0;
+            }
         }
 
-        &-post {
+        .team-group__item-post {
+            padding-top: 18px;
             opacity: 0.7;
+            @media (max-width: 1440px) {
+                
+            }
         }
 
-        &-name {
-            
-        }
-
-        .name_color {
+        .team-group__item-name {
             color: #BF3AFF;
         }
     }
 
-    .item-fourth {
+    .item_fourth {
+        transform: translateY(0);
+        transition: all 0.5s ease-out;
 
-        &-man {}
-
-        &-social {
+        .team-group__item-social {
+            opacity: 0;
+            transition: all 0.5s ease-out;
+            padding-bottom: 10px;
 
             &-item {}
         }
 
-        &-post {
+        .team-group__item-post {
             opacity: 0.7;
         }
 
-        &-name {
+        .team-group__item-name {
             color: #FB41FF;
+        }
+
+        @media (max-width: 1440px) {
+            transform: translateY(160px);
+            .team-group__item-man {
+                order: 1;
+            }
+            .team-group__item-social {
+                padding-bottom: 0;
+                order: 2;
+            }
+            .team-group__item-post {
+                order: 3;
+            }
+    
+            .team-group__item-name {
+                order: 4;
+            }
+        }
+    }
+
+ 
+
+    .active.item_first, .active.item_third {
+        transition: all 0.5s ease-out;
+        transform: translateY(0);
+
+        .team-group__item-social {
+            opacity: 1;
+            transition: all 0.5s ease-out;
+        }
+        @media (max-width: 1440px) {
+            transform: translateY(110px);
+        }
+    }
+
+    .active.item_third {
+        transform: translateY(30px);
+        @media (max-width: 1440px) {
+            transform: translateY(140px);
+        }
+    }
+
+    .active.item_second, .active.item_fourth {
+        transition: all 0.5s ease-out;
+        transform: translateY(150px);
+        .team-group__item-social {
+            opacity: 1;
+            transition: all 0.5s ease-out;
+        }
+        @media (max-width: 1440px) {
+            transform: translateY(140px);
+        }
+    }
+
+    .active.item_fourth {
+        transform: translateY(150px);
+        @media (max-width: 1440px) {
+            transform: translateY(130px);
         }
     }
 }

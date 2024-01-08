@@ -1,23 +1,3 @@
-// const headerBurger = document.querySelector('.header-burger');
-// const burgerBackdrop = document.querySelector('.burger-backdrop');
-// const headerBurgerMenu = document.querySelector('.header-menu');
-
-// if (headerBurger) {
-//   headerBurger.addEventListener("click", function (e) {
-//     if(document.body.classList.contains('lock')){
-//       document.body.style.width = "auto";
-//       headerBurger.classList.toggle('header-burger_shift')
-//     } else {
-//       document.body.style.width = document.body.clientWidth + 'px';
-//       headerBurger.classList.toggle('header-burger_shift')
-//     }
-//     document.body.classList.toggle('lock');
-//     // burgerBackdrop.classList.toggle('active')
-//     headerBurger.classList.toggle('active');
-//     headerBurgerMenu.classList.toggle('active');
-//   });
-// }
-
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector('.header-burger')
     .addEventListener("click", function (e) {
@@ -38,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
       headerBurgerMenu.classList.toggle('active');
     });
 });
-
 
 window.onscroll = function () { scrollFunction() };
 
@@ -88,4 +67,13 @@ accordionItems.forEach(accordionItem => {
   });
 });
 
+///////////////////////////////
+
+const teamGroupItems = document.querySelectorAll('.team-group__item');
+
+teamGroupItems.forEach(teamGroupItem => {
+  teamGroupItem.addEventListener("click", () => {
+    teamGroupItem.classList.toggle("active");
+  });
+});
 
