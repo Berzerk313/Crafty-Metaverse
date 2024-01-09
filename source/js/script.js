@@ -59,7 +59,7 @@ var swiper = new Swiper(".about-swiper", {
 
 //////////////////////////////
 
-const accordionItems = document.querySelectorAll('.roadmap-item-info');
+const accordionItems = document.querySelectorAll('.roadmap-item-info__item');
 
 accordionItems.forEach(accordionItem => {
   accordionItem.addEventListener("click", () => {
@@ -74,6 +74,16 @@ const teamGroupItems = document.querySelectorAll('.team-group__item');
 teamGroupItems.forEach(teamGroupItem => {
   teamGroupItem.addEventListener("click", () => {
     teamGroupItem.classList.toggle("active");
+  });
+});
+
+//////////////////////////////
+
+const faqItems = document.querySelectorAll('.faq-content__item');
+
+faqItems.forEach(faqItem => {
+  faqItem.addEventListener("click", () => {
+    faqItem.classList.toggle("active");
   });
 });
 
