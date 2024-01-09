@@ -87,3 +87,20 @@ faqItems.forEach(faqItem => {
   });
 });
 
+/////////////////////////////
+
+var swiper = new Swiper(".social-swiper", {
+  // loop: true,
+  spaceBetween: 30,
+  updateOnWindowResize: true,
+  breakpoints: {
+    1920: {
+      slidesPerView: 4,
+    },
+
+    320: {
+      slidesPerView: 1.75,
+    },
+  },
+});
+

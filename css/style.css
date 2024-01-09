@@ -1091,8 +1091,9 @@ main {
   background: rgb(135, 237, 255);
 }
 @media (max-width: 1240px) {
-  .roadmap-item-info__content {
+  .roadmap-item-info__item-content {
     position: static;
+    pointer-events: none;
   }
   .roadmap-item-third {
     padding: 60px 0 0 45px;
@@ -1102,7 +1103,7 @@ main {
   }
 }
 @media (max-width: 768px) {
-  .roadmap-content {
+  .roadmap__item-content {
     padding-bottom: 155px;
   }
   .roadmap-item-circle__pulse {
@@ -1930,7 +1931,7 @@ main {
     transform: translateX(-100%);
   }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1440px) {
   .game-outer-big__text {
     font-size: 120px;
   }
@@ -2838,7 +2839,7 @@ main {
 }
 
 .faq {
-  background: #0A0117;
+  background: #090812;
   background-image: url(../img/faq/bg.webp), url(../img/faq/bg.png);
   background-repeat: no-repeat;
   overflow: hidden;
@@ -2880,6 +2881,26 @@ main {
   height: 46px;
   transform: rotate(11.44deg);
 }
+@media (max-width: 1440px) {
+  .faq-outer__text {
+    font-size: 33px;
+  }
+  .faq-outer-small {
+    transform: rotate(6.016deg) translateY(100px) translateX(-100px);
+  }
+}
+@media (max-width: 768px) {
+  .faq-outer__text {
+    width: 200%;
+  }
+  .faq-outer__text span {
+    display: inline-block;
+    transform: rotate(11.44deg);
+  }
+  .faq-outer-small {
+    transform: rotate(-9.09deg) translateY(-50px) translateX(-50px);
+  }
+}
 @keyframes running-text-first {
   0% {
     transform: translateX(100%);
@@ -2887,6 +2908,28 @@ main {
   100% {
     transform: translateX(-100%);
   }
+}
+.faq-blurs {
+  position: relative;
+  z-index: 0;
+}
+.faq-blurs__first {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.faq-blurs__second {
+  position: absolute;
+  top: 370px;
+  right: 0px;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
 }
 .faq .container {
   padding-top: 300px;
@@ -2907,6 +2950,11 @@ main {
   padding: 89px 20px 95px 77px;
   -webkit-clip-path: polygon(5% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 4%);
           clip-path: polygon(5% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 4%);
+}
+@media (max-width: 768px) {
+  .faq-content {
+    padding: 89px 20px 95px 20px;
+  }
 }
 .faq-content__subtitle {
   color: #FFF;
@@ -2959,6 +3007,12 @@ main {
 .faq-content__item-nav-plus {
   position: relative;
   max-width: 30px;
+  padding: 0 40px;
+}
+@media (max-width: 375px) {
+  .faq-content__item-nav-plus {
+    padding: 0 35px;
+  }
 }
 .faq-content__item-nav-plus .plus-first-span {
   position: absolute;
@@ -2988,6 +3042,11 @@ main {
   width: 100%;
   height: 1px;
   background: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 375px) {
+  .faq-content__item-nav::after {
+    top: 120px;
+  }
 }
 .faq-content__item-content {
   max-height: 0;
@@ -3023,4 +3082,48 @@ main {
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+.social {
+  background: #090812;
+  background-image: url(/img/social/bg.webp), url(/img/social/bg.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.social__subtitle {
+  padding-top: 141px;
+  color: #FFF;
+  text-align: center;
+  font-family: "Plus Jakarta Display";
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 28px */
+  text-transform: uppercase;
+}
+.social__title {
+  padding-top: 16px;
+  color: #FFF;
+  text-align: center;
+  font-family: "HeliosExtC";
+  font-size: clamp(28px, 2.5vw, 45px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 109%;
+  /* 49.05px */
+  text-transform: uppercase;
+}
+.social .social-swiper {
+  max-width: 1200px;
+  padding-top: 105px;
+  padding-bottom: 175px;
+}
+.social .social-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social .social-slide__img {
+  max-width: 100%;
 }/*# sourceMappingURL=style.css.map */
