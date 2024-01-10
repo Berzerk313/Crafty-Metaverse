@@ -1017,7 +1017,7 @@ main {
 }
 .roadmap-item-circle .pulse_first {
   background: rgb(131, 48, 254);
-  margin: 25px 0px 0 55px;
+  margin: 25px 0px 0 0px;
 }
 .roadmap-item-circle .pulse_second {
   background: rgb(255, 134, 255);
