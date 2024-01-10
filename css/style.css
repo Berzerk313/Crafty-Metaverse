@@ -693,6 +693,10 @@ main {
   background: #090812;
   overflow-x: hidden;
 }
+.roadmap-wrapper {
+  position: relative;
+  z-index: 0;
+}
 .roadmap-blurs {
   position: relative;
   z-index: 0;
@@ -753,8 +757,8 @@ main {
 }
 @media (max-width: 768px) {
   .roadmap-blur__third {
-    top: 250px;
-    left: 60%;
+    top: -30px;
+    left: 70%;
     width: 250px;
     height: 250px;
   }
@@ -779,7 +783,7 @@ main {
 }
 @media (max-width: 390px) {
   .roadmap-blur__third {
-    top: 150px;
+    top: -30px;
     left: 40%;
   }
   .roadmap-blur__fourth {
@@ -1013,7 +1017,7 @@ main {
 }
 .roadmap-item-circle .pulse_first {
   background: rgb(131, 48, 254);
-  margin: 25px 0px 0 0px;
+  margin: 25px 0px 0 55px;
 }
 .roadmap-item-circle .pulse_second {
   background: rgb(255, 134, 255);
@@ -3090,6 +3094,37 @@ main {
   background-repeat: no-repeat;
   overflow: hidden;
 }
+.social-blurs {
+  position: relative;
+  z-index: 0;
+}
+.social-blurs__first {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.social-blurs__second {
+  position: absolute;
+  top: 370px;
+  right: 0px;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.social-blurs__third {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
 .social__subtitle {
   padding-top: 141px;
   color: #FFF;
@@ -3118,12 +3153,141 @@ main {
   max-width: 1200px;
   padding-top: 105px;
   padding-bottom: 175px;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
 }
 .social .social-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 1440px) {
+  .social .social-wrapper {
+    max-width: 900px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .social .social-wrapper {
+    flex-wrap: nowrap;
+    padding-left: 500px;
+    padding-right: 60px;
+    width: 100%;
+  }
+}
+.social .social-slide {
+  width: 100%;
+  max-width: 300px;
+}
 .social .social-slide__img {
   max-width: 100%;
+}
+
+.footer {
+  background: #090812;
+  overflow: hidden;
+}
+@media (max-width: 1440px) {
+  .footer {
+    display: none;
+  }
+}
+.footer-blurs {
+  position: relative;
+  z-index: 0;
+}
+.footer-blurs__first {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.footer-blurs__second {
+  position: absolute;
+  top: 0px;
+  left: 25%;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.footer-blurs__third {
+  position: absolute;
+  top: 0px;
+  left: 30%;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.footer-blurs__fourth {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: clip;
+  z-index: -1;
+}
+.footer-columns {
+  display: flex;
+  height: 285px;
+}
+.footer-columns__first {
+  flex: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 38px;
+  padding-left: 75px;
+}
+.footer-columns__first-img {
+  width: 58px;
+  height: 58px;
+}
+.footer-columns__first-text {
+  color: #FFF;
+  font-family: "Plus Jakarta Display";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 25.2px */
+}
+.footer-columns__second {
+  flex: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 124px;
+  border: solid 1px rgba(255, 255, 255, 0.4);
+  position: relative;
+}
+.footer-columns__second-text {
+  color: #FFF;
+  text-align: center;
+  font-family: "Plus Jakarta Display";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 25.2px */
+}
+.footer-columns__second::after {
+  content: "";
+  border-bottom: solid 1px rgba(255, 255, 255, 0.4);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.footer-columns__third {
+  flex: 60%;
 }/*# sourceMappingURL=style.css.map */

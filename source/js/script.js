@@ -91,11 +91,19 @@ faqItems.forEach(faqItem => {
 
 var swiper = new Swiper(".social-swiper", {
   // loop: true,
-  spaceBetween: 30,
+  spaceBetween: 0,
   updateOnWindowResize: true,
   breakpoints: {
     1920: {
       slidesPerView: 4,
+    },
+
+    1440: {
+      slidesPerView: 4,
+    },
+
+    768: {
+      slidesPerView: 2.5,
     },
 
     320: {
