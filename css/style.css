@@ -3090,7 +3090,7 @@ main {
 
 .social {
   background: #090812;
-  background-image: url(/img/social/bg.webp), url(/img/social/bg.png);
+  background-image: url(../img/social/bg.webp), url(../img/social/bg.png);
   background-repeat: no-repeat;
   overflow: hidden;
 }
