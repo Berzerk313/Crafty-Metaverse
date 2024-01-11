@@ -831,6 +831,11 @@ main {
   padding-bottom: 230px;
   position: relative;
 }
+@media (max-width: 768px) {
+  .roadmap-content {
+    padding-bottom: 150px;
+  }
+}
 .roadmap__stars {
   position: absolute;
   top: 6%;
@@ -2133,14 +2138,14 @@ main {
 @media (max-width: 768px) {
   .game__man {
     z-index: 2;
-    transform: translateY(-90px);
+    transform: translateY(-50px) translateX(10px) scale(1.22);
   }
   .game__woman {
     z-index: 2;
-    transform: translateX(-5%) translateY(-70px);
+    transform: translateX(-1%) translateY(-52px) scale(1.1);
   }
   .game__circle {
-    transform: translateX(-5%) translateY(-27px);
+    transform: translateX(5%) translateY(-25px);
   }
 }
 .game-info::after {
@@ -2332,7 +2337,7 @@ main {
     padding-left: 46px;
   }
   .explore-top__info-text {
-    padding: 23px 10px 0 10px;
+    padding: 25px 10px 0 10px;
   }
   .explore-top__info::after {
     top: 0;
@@ -2371,11 +2376,11 @@ main {
     left: 80%;
   }
   .explore-top__info-text:nth-child(3) {
-    padding: 23px 0 0 0;
+    padding: 27px 0 0 0;
     margin-right: 0;
   }
   .explore-top__info-text:nth-child(4) {
-    padding: 14px 0 0 0;
+    padding: 17px 0 0 0;
     transform: translateX(0px) translateY(0px);
   }
 }
@@ -2384,11 +2389,12 @@ main {
     align-items: start;
   }
   .explore-top__info-star {
-    bottom: -8%;
-    left: 82%;
+    bottom: 13.5%;
+    left: 77%;
   }
   .explore-top__img {
-    padding-top: 50px;
+    padding-top: 0px;
+    transform: translateY(-10px);
   }
 }
 .explore-bottom {
@@ -2401,16 +2407,18 @@ main {
 }
 .explore-bottom__img {
   position: absolute;
-  top: -35%;
-  left: 0;
+  top: -28%;
+  left: 0%;
   transform: translateX(-150px);
   max-width: 100%;
   height: auto;
   z-index: 0;
 }
-@media (max-width: 1800px) {
+@media (max-width: 768px) {
   .explore-bottom__img {
-    max-width: 100%;
+    top: -10%;
+    left: -40%;
+    transform: scale(1.7);
   }
 }
 .explore-bottom__info {
@@ -2448,15 +2456,15 @@ main {
 .explore-bottom__info-text {
   color: rgba(255, 255, 255, 0.9);
   font-family: "Plus Jakarta Display";
-  font-size: clamp(16px, 2.5vw, 20px);
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
   /* 32px */
   opacity: 0.9;
   max-width: 470px;
-  padding-left: 100px;
-  transform: translateX(0px) translateY(80px);
+  padding-left: 20px;
+  transform: translateX(32px) translateY(57px);
   padding-bottom: 200px;
 }
 .explore-bottom__info-button {
@@ -2472,6 +2480,7 @@ main {
   background: var(--1, linear-gradient(99deg, #7A42F4 0%, #4642F4 100%), #FFF);
   border: none;
   transition: all 0.5s ease-out;
+  transform: translateY(-20px);
 }
 .explore-bottom__info-button span {
   color: #FFF;
@@ -2534,7 +2543,8 @@ main {
     margin-bottom: 100px;
   }
   .explore-bottom__info-star {
-    bottom: 130%;
+    bottom: 142.5%;
+    right: 25.5%;
   }
   .explore-bottom__info::after {
     top: 100%;
@@ -2557,28 +2567,43 @@ main {
   }
 }
 @media (max-width: 768px) {
+  .explore .container {
+    padding-bottom: 96px;
+  }
   .explore-bottom__info {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px 55px 0px 29px;
+    transform: translateY(80px);
+    height: 438px;
+    max-height: 455px;
   }
   .explore-bottom__info-title {
+    padding-top: 18px;
     padding-bottom: 12px;
   }
   .explore-bottom__info-text {
-    padding: 0 0 23px 0;
+    padding: 0 0 23px 0px;
+    max-width: 279px;
+    width: 279px;
+    transform: translateX(7px);
   }
   .explore-bottom__info-button {
+    transform: translateY(2px) translateX(-45px);
     margin-bottom: 74px;
   }
 }
 @media (max-width: 375px) {
   .explore-bottom__info {
-    padding: 15px 55px 0px 29px;
+    padding: 0px 55px 0px 29px;
   }
   .explore-bottom__info-text {
-    padding-bottom: 10px;
+    font-size: 15px;
+    transform: translateX(37px);
+  }
+  .explore-bottom__info-button {
+    transform: translateY(2px) translateX(0px);
   }
 }
 
