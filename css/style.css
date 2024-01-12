@@ -698,6 +698,7 @@ main {
   z-index: 0;
   width: 100%;
   display: flex;
+  pointer-events: none;
 }
 .roadmap-item-first:nth-child(2) .roadmap-wrapper {
   justify-content: flex-start;
@@ -971,6 +972,9 @@ main {
   justify-content: center;
   gap: 9px;
   cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 .roadmap-item-info__item-nav-text {
   color: #FFF;
@@ -994,7 +998,6 @@ main {
   transition: 0.5s ease-in-out;
   position: absolute;
   top: 100%;
-  pointer-events: none;
 }
 .roadmap-item-info__item-content-text {
   padding-top: 15px;
@@ -1131,7 +1134,6 @@ main {
 @media (max-width: 1240px) {
   .roadmap-item-info__item-content {
     position: static;
-    pointer-events: none;
   }
   .roadmap-item-third {
     padding: 60px 0 0 45px;
@@ -3344,7 +3346,6 @@ main {
   max-height: 0;
   overflow: hidden;
   transition: 0.5s ease-in-out;
-  pointer-events: none;
   padding: 0 0 0 10px;
 }
 @media (max-width: 768px) {

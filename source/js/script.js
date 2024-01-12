@@ -82,8 +82,10 @@ var swiper = new Swiper(".about-swiper", {
 const accordionItems = document.querySelectorAll('.roadmap-item-info__item');
 
 accordionItems.forEach(accordionItem => {
-  accordionItem.addEventListener("click", () => {
-    accordionItem.classList.toggle("active");
+  accordionItem.addEventListener("click", (event) => {
+    if(event.target.closest('.roadmap-item-info__item-nav')) { 
+      accordionItem.classList.toggle('active')
+    }
   });
 });
 
@@ -106,15 +108,14 @@ function removeActiveClass() {
 }
 
 faqItems.forEach(faqItem => {
-  faqItem.addEventListener("click", () => {
+  faqItem.addEventListener("click", (event) => {
+    if (event.target.closest('.faq-content__item-content')) return
     if (faqItem.classList.contains("active")) {
-      removeActiveClass();
+      // removeActiveClass();
     } else {
       removeActiveClass();
       faqItem.classList.toggle("active");
     }
-   
-    
   });
 });
 
