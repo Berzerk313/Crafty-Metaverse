@@ -107,8 +107,14 @@ function removeActiveClass() {
 
 faqItems.forEach(faqItem => {
   faqItem.addEventListener("click", () => {
-    removeActiveClass();
-    faqItem.classList.toggle("active");
+    if (faqItem.classList.contains("active")) {
+      removeActiveClass();
+    } else {
+      removeActiveClass();
+      faqItem.classList.toggle("active");
+    }
+   
+    
   });
 });
 
