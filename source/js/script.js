@@ -140,7 +140,7 @@ var swiper = new Swiper(".social-swiper", {
     },
 
     320: {
-      slidesPerView: 1.75,
+      slidesPerView: 1.6,
     },
   },
 });
