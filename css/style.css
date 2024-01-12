@@ -1905,6 +1905,7 @@ main {
   border-bottom: rgba(255, 255, 255, 0.2) 1px solid;
   overflow: hidden;
   text-wrap: nowrap;
+  white-space: nowrap;
   width: 150%;
   max-height: 289px;
   z-index: 5;
@@ -1934,6 +1935,7 @@ main {
   background: #000;
   overflow: hidden;
   text-wrap: nowrap;
+  white-space: nowrap;
   width: 150%;
   max-height: 103px;
   z-index: 5;
@@ -3028,6 +3030,7 @@ main {
   background: #000;
   overflow: hidden;
   text-wrap: nowrap;
+  white-space: nowrap;
   width: 150%;
   max-height: 103px;
   z-index: 5;
